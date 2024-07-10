@@ -1,5 +1,5 @@
 {
-  "name": "holtrack_web",
+  "name": "holtrack",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

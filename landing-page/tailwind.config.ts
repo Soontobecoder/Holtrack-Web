@@ -1,10 +1,18 @@
 import type { Config } from "tailwindcss";
+/**
+ * @type {import('@types/tailwindcss/tailwind-config').TailwindConfig}
+ */
 
 const config: Config = {
   content: [
+    "./node_modules/tw-elements/js/**/*.js",
+    "./node_modules/flowbite-react/lib/**/*.js",
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{html,js}",
+    "./pages/**/*.{ts,tsx}",
+    "./public/**/*.html",
   ],
   theme: {
     extend: {
@@ -15,6 +23,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tw-elements/plugin.cjs"), require("flowbite/plugin")],
+  darkMode: "class",
 };
 export default config;

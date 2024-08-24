@@ -1,113 +1,219 @@
-import Image from "next/image";
+"use client";
+import dynamic from "next/dynamic";
+import { useEffect, useState } from "react";
+import "./home.css";
+import { HomeHeader } from "./components/HomeHeader";
+import { HomeBody } from "./components/HomeBody";
+import { Carousel } from "./components/Carousel";
+import { Gallery } from "./components/Gallery";
+import { CardTitle } from "./components/CardTitle";
+import { Tabs } from "./components/Tabs";
+import { ScrollerList } from "./components/scrollerList";
 
-export default function Home() {
+// const Gallery = dynamic(() => import("./components/Gallery"), {
+//   ssr: false,
+// });
+
+const Home = () => {
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setIsReducedMotion(mediaQuery.matches);
+
+    // Optionally, add an event listener to handle changes to the media query
+    const handleChange = (e: MediaQueryListEvent) =>
+      setIsReducedMotion(e.matches);
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleChange);
+    };
+  }, []);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="flex flex-col" style={{ backgroundColor: "white" }}>
+      {/* <div className="scroll-watcher"></div> */}
+      <HomeHeader />
+      <div className="grid grid-cols-6 gap-10 mb-12">
+        <div className="col-start-1 col-span-3 xl:col-start-2 xl:col-span-1">
+          <CardTitle
+            image="https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg"
+            cardBody="Some quick example text to build on the card title and make up the bulk of the card's content."
+            cardTitle="Card title"
+          />
+        </div>
+        <div className="col-start-4 col-span-3 xl:col-start-3 xl:col-span-1">
+          <CardTitle
+            image="https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg"
+            cardBody="Some quick example text to build on the card title and make up the bulk of the card's content."
+            cardTitle="Card title"
+          />
+        </div>
+        <div className="col-start-1 col-span-3 xl:col-start-4 xl:col-span-1">
+          <CardTitle
+            image="https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg"
+            cardBody="Some quick example text to build on the card title and make up the bulk of the card's content."
+            cardTitle="Card title"
+          />
+        </div>
+        <div className="col-start-4 col-span-3 xl:col-start-5 xl:col-span-1">
+          <CardTitle
+            image="https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg"
+            cardBody="Some quick example text to build on the card title and make up the bulk of the card's content."
+            cardTitle="Card title"
+          />
+        </div>
+      </div>
+      {/* <h2 className="text-center text-black text-6xl font-semibold mt-12">
+        {" "}
+        What we offer{" "}
+      </h2>
+      <footer className="block text-center mt-1 text-neutral-600 dark:text-neutral-400">
+        Someone famous in <cite>Source Title</cite>
+      </footer>
+      <div className="grid grid-cols-6 mt-12">
+        <div className="md:col-start-2 col-span-6 md:col-span-4">
+          <Carousel style={{ backgroundColor: "white" }} />
+        </div>
+      </div> */}
+      <div className="grid grid-cols-6 mt-12 gap-10">
+        {/* Banner 1 */}
+        <div className="slideInLeft ml-5 mr-5 xl:ml-0 xl:mr-0 col-start-1 self-center col-span-6 xl:col-span-2 xl:col-start-2">
+          <h1 className="text-6xl text-black">HOLTRACK FOR THE WIN</h1>
+          <p
+            style={{ fontSize: "24px" }}
+            className="mb-4 text-black text-base font-light leading-relaxed"
           >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis,
+            libero iste quod quibusdam maxime recusandae odit eveniet,
+            aspernatur culpa provident error molestiae vitae corporis in vero
+            est! Beatae, ipsum voluptatibus.
+          </p>
+          <button
+            type="button"
+            className="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+          >
+            Button
+          </button>
+        </div>
+        <div className="slideInRight ml-5 mr-5 xl:ml-0 xl:mr-0 justify-self-end col-start-1 col-span-6 mt-12 xl:mt-0 xl:col-start-4 xl:col-span-2">
+          <img
+            src="https://tecdn.b-cdn.net/img/new/standard/city/041.webp"
+            className="banner h-auto max-w-full rounded-lg shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30"
+            alt=""
+          />
+        </div>
+
+        {/* Banner 2 */}
+        <div className="slideInLeft ml-5 mr-5 xl:ml-0 xl:mr-0 mt-12 col-start-1 self-center col-span-6 xl:col-span-2 xl:col-start-4">
+          <h1 className="text-6xl text-black">HOLTRACK FOR THE WIN</h1>
+          <p
+            style={{ fontSize: "24px" }}
+            className="mb-4 text-black text-base font-light leading-relaxed"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis,
+            libero iste quod quibusdam maxime recusandae odit eveniet,
+            aspernatur culpa provident error molestiae vitae corporis in vero
+            est! Beatae, ipsum voluptatibus.
+          </p>
+          <button
+            type="button"
+            className="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+          >
+            Button
+          </button>
+        </div>
+        <div className="slideInRight ml-5 mr-5 xl:ml-0 xl:mr-0 col-start-1 col-span-6 mt-12 xl:col-start-2 xl:row-start-2 xl:col-span-2">
+          <img
+            src="https://tecdn.b-cdn.net/img/new/standard/city/041.webp"
+            className="banner h-auto max-w-full rounded-lg shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30"
+            alt=""
+          />
+        </div>
+
+        {/* Banner 3 */}
+        <div className="slideInLeft ml-5 mr-5 xl:ml-0 xl:mr-0 col-start-1 self-center mt-12 mb-12 col-span-6 xl:col-span-2 xl:col-start-2">
+          <h1 className="text-6xl text-black">HOLTRACK FOR THE WIN</h1>
+          <p
+            style={{ fontSize: "24px" }}
+            className="mb-4 text-black text-base font-light leading-relaxed"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis,
+            libero iste quod quibusdam maxime recusandae odit eveniet,
+            aspernatur culpa provident error molestiae vitae corporis in vero
+            est! Beatae, ipsum voluptatibus.
+          </p>
+          <button
+            type="button"
+            className="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+          >
+            Button
+          </button>
+        </div>
+        <div className="slideInRight ml-5 mr-5 xl:ml-0 xl:mr-0 justify-self-end col-start-1 mb-12 col-span-6 mt-12 xl:col-start-4 xl:col-span-2">
+          <img
+            src="https://tecdn.b-cdn.net/img/new/standard/city/041.webp"
+            className="banner h-auto max-w-full rounded-lg shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30"
+            alt=""
+          />
         </div>
       </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <HomeBody />
+      <h2 className="text-center text-black text-6xl font-semibold mt-12">
+        Our technologies
+      </h2>
+      <footer className="block text-center mt-1 text-neutral-600 dark:text-neutral-400">
+        - Someone famous in <cite>Source Title</cite>
+      </footer>
+
+      <div className="grid grid-cols-6 mt-12 p-4 xl:p-12">
+        <div className="xl:col-start-2 col-span-6 xl:col-span-4">
+          {!isReducedMotion ? (
+            <ScrollerList dataAnimated="true" />
+          ) : (
+            <Gallery />
+          )}
+          {/*
+          or you can do this instead
+          
+          {!isReducedMotion ? (
+            <ScrollerList dataAnimated="true" />
+          ) : (
+            <ScrollerList dataAnimated="false" />
+          )}
+          */}
+        </div>
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div
+        style={{
+          width: "100%",
+          height: "auto",
+          clipPath: "polygon(0 0, 100% 10%, 100% 100%, 0 90%)",
+          backgroundColor: "#D2D8DC",
+          paddingBottom: "150px",
+          paddingTop: "150px",
+        }}
+      >
+        <h2 className="text-center bg text-black text-6xl font-semibold mt-12">
+          {" "}
+          Our specializations{" "}
+        </h2>
+        <footer className="block text-center mt-1 text-neutral-600 dark:text-neutral-400">
+          Someone famous in <cite>Source Title</cite>
+        </footer>
+        <Tabs className="p-4 md:p-12 md:ml-12 md:mr-12" />
       </div>
-    </main>
+    </div>
   );
-}
+};
+
+export default Home;
+
+// export default function Home() {
+//   return (
+//     <Layout>
+//       <Interface />
+//     </Layout>
+//   );
+// }

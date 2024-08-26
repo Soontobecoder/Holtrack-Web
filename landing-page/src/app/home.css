@@ -115,9 +115,9 @@
   }
 }
 
-.scroller {
-  max-width: 1200px;
-}
+/* .scroller {
+  max-width: 1800px;
+} */
 
 .scroller[data-animated="true"] {
   overflow: hidden;

@@ -8,7 +8,7 @@ interface HeaderProps {
 
 export const HomeHeader: React.FC<HeaderProps> = ({ className, style }) => {
   return (
-    <div className="absolute bg-cover bg-no-repeat bg-[url('https://cdnblog.picsart.com/2022/02/devs.jpg')] top-20 relative w-full border rounded-lg shadow ">
+    <div className="bg-cover bg-no-repeat bg-[url('https://cdnblog.picsart.com/2022/02/devs.jpg')] top-20 relative w-full border rounded-lg shadow ">
       <div
         style={{
           padding: "100px",

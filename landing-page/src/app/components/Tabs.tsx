@@ -1,3 +1,5 @@
+"use client";
+import { useEffect, useState } from "react";
 import { CSSProperties } from "react";
 
 interface TabProps {
@@ -6,107 +8,207 @@ interface TabProps {
 }
 
 export const Tabs: React.FC<TabProps> = ({ style, className }) => {
+  useEffect(() => {
+    const init = async () => {
+      const { Tab, initTWE } = await import("tw-elements");
+      initTWE({ Tab });
+    };
+    init();
+  }, []);
   return (
-    <div className={className + " md:flex"}>
-      <ul className="flex-column space-y space-y-4 text-sm font-medium text-gray-500 text-gray-400 md:me-4 mb-4 md:mb-0">
-        <li>
+    <div className={className + ""}>
+      {/* nav header */}
+      <ul
+        className="flex list-none flex-row flex-wrap border-b-0 ps-0"
+        role="tablist"
+        data-twe-nav-ref
+      >
+        <li role="presentation" className="flex-grow basis-0 text-center">
           <a
-            href="#"
-            className="inline-flex items-center px-4 py-3 text-white bg-blue-700 rounded-lg active w-full bg-blue-600"
-            aria-current="page"
+            href="#tabs-home02"
+            className="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[twe-nav-active]:bg-white data-[twe-nav-active]:border-warning data-[twe-nav-active]:text-warning dark:text-white/50 dark:hover:bg-neutral-700/60 dark:data-[twe-nav-active]:text-primary"
+            data-twe-toggle="pill"
+            data-twe-target="#tabs-home02"
+            data-twe-nav-active
+            role="tab"
+            aria-controls="tabs-home02"
+            aria-selected="true"
           >
-            <svg
-              className="w-4 h-4 me-2 text-white"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z" />
-            </svg>
+            Home
+          </a>
+        </li>
+        <li role="presentation" className="flex-grow basis-0 text-center">
+          <a
+            href="#tabs-profile02"
+            className="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[twe-nav-active]:bg-white data-[twe-nav-active]:border-warning data-[twe-nav-active]:text-warning dark:text-white/50 dark:hover:bg-neutral-700/60 dark:data-[twe-nav-active]:text-primary"
+            data-twe-toggle="pill"
+            data-twe-target="#tabs-profile02"
+            role="tab"
+            aria-controls="tabs-profile02"
+            aria-selected="false"
+          >
             Profile
           </a>
         </li>
-        <li>
+        <li role="presentation" className="flex-grow basis-0 text-center">
           <a
-            href="#"
-            className="inline-flex items-center px-4 py-3 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full bg-gray-800 hover:bg-gray-700 hover:text-white"
+            href="#tabs-messages02"
+            className="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[twe-nav-active]:bg-white data-[twe-nav-active]:border-warning data-[twe-nav-active]:text-warning dark:text-white/50 dark:hover:bg-neutral-700/60 dark:data-[twe-nav-active]:text-primary"
+            data-twe-toggle="pill"
+            data-twe-target="#tabs-messages02"
+            role="tab"
+            aria-controls="tabs-messages02"
+            aria-selected="false"
           >
-            <svg
-              className="w-4 h-4 me-2 text-gray-500 text-gray-400"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 18 18"
-            >
-              <path d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z" />
-            </svg>
-            Dashboard
+            Messages
           </a>
         </li>
-        <li>
+        <li role="presentation" className="flex-grow basis-0 text-center">
           <a
-            href="#"
-            className="inline-flex items-center px-4 py-3 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full bg-gray-800 hover:bg-gray-700 hover:text-white"
+            href="#tabs-contact02"
+            className="disabled pointer-events-none my-2 block border-x-0 border-b-2 border-t-0 border-transparent bg-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-400 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent dark:text-neutral-600"
+            data-twe-toggle="pill"
+            data-twe-target="#tabs-contact02"
+            role="tab"
+            aria-controls="tabs-contact02"
+            aria-selected="false"
           >
-            <svg
-              className="w-4 h-4 me-2 text-gray-500 text-gray-400"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path d="M18 7.5h-.423l-.452-1.09.3-.3a1.5 1.5 0 0 0 0-2.121L16.01 2.575a1.5 1.5 0 0 0-2.121 0l-.3.3-1.089-.452V2A1.5 1.5 0 0 0 11 .5H9A1.5 1.5 0 0 0 7.5 2v.423l-1.09.452-.3-.3a1.5 1.5 0 0 0-2.121 0L2.576 3.99a1.5 1.5 0 0 0 0 2.121l.3.3L2.423 7.5H2A1.5 1.5 0 0 0 .5 9v2A1.5 1.5 0 0 0 2 12.5h.423l.452 1.09-.3.3a1.5 1.5 0 0 0 0 2.121l1.415 1.413a1.5 1.5 0 0 0 2.121 0l.3-.3 1.09.452V18A1.5 1.5 0 0 0 9 19.5h2a1.5 1.5 0 0 0 1.5-1.5v-.423l1.09-.452.3.3a1.5 1.5 0 0 0 2.121 0l1.415-1.414a1.5 1.5 0 0 0 0-2.121l-.3-.3.452-1.09H18a1.5 1.5 0 0 0 1.5-1.5V9A1.5 1.5 0 0 0 18 7.5Zm-8 6a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Z" />
-            </svg>
-            Settings
-          </a>
-        </li>
-        <li>
-          <a
-            href="#"
-            className="inline-flex items-center px-4 py-3 rounded-lg hover:text-gray-900 bg-gray-50 hover:bg-gray-100 w-full bg-gray-800 hover:bg-gray-700 hover:text-white"
-          >
-            <svg
-              className="w-4 h-4 me-2 text-gray-500 text-gray-400"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path d="M7.824 5.937a1 1 0 0 0 .726-.312 2.042 2.042 0 0 1 2.835-.065 1 1 0 0 0 1.388-1.441 3.994 3.994 0 0 0-5.674.13 1 1 0 0 0 .725 1.688Z" />
-              <path d="M17 7A7 7 0 1 0 3 7a3 3 0 0 0-3 3v2a3 3 0 0 0 3 3h1a1 1 0 0 0 1-1V7a5 5 0 1 1 10 0v7.083A2.92 2.92 0 0 1 12.083 17H12a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h1a1.993 1.993 0 0 0 1.722-1h.361a4.92 4.92 0 0 0 4.824-4H17a3 3 0 0 0 3-3v-2a3 3 0 0 0-3-3Z" />
-            </svg>
             Contact
           </a>
         </li>
-        <li>
-          <a className="inline-flex items-center px-4 py-3 text-gray-400 rounded-lg cursor-not-allowed bg-gray-50 w-full bg-gray-800 text-gray-500">
-            <svg
-              className="w-4 h-4 me-2 text-gray-400 text-gray-500"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
-              <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 11.793a1 1 0 1 1-1.414 1.414L10 11.414l-2.293 2.293a1 1 0 0 1-1.414-1.414L8.586 10 6.293 7.707a1 1 0 0 1 1.414-1.414L10 8.586l2.293-2.293a1 1 0 0 1 1.414 1.414L11.414 10l2.293 2.293Z" />
-            </svg>
-            Disabled
-          </a>
-        </li>
       </ul>
-      <div className="p-6 bg-gray-50 text-medium text-gray-500 text-gray-400 bg-gray-800 rounded-lg w-full">
-        <h3 className="text-lg font-bold text-gray-900 text-white mb-2">
-          Profile Tab
-        </h3>
-        <p className="mb-2">
-          This is some placeholder content the Profile tab's associated content,
-          clicking another tab will toggle the visibility of this one for the
-          next.
-        </p>
-        <p>
-          The tab JavaScript swaps classNamees to control the content visibility
-          and styling.
-        </p>
+
+      {/* content */}
+      <div
+        className="bg-white rounded-lg text-black "
+        style={{ marginTop: "-8px" }}
+      >
+        <div
+          className="hidden opacity-100 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
+          id="tabs-home02"
+          role="tabpanel"
+          aria-labelledby="tabs-home-tab02"
+          data-twe-tab-active
+        >
+          <div className="grid xl:grid-cols-6 p-12 gap-10">
+            <div className="xl:col-start-1 xl:col-span-2 self-center">
+              <img
+                src="https://tecdn.b-cdn.net/img/new/slides/041.jpg"
+                className="h-auto max-w-full rounded-lg"
+                alt="..."
+              />
+            </div>
+            <div className="xl:col-span-4">
+              {" "}
+              <div className="mb-4">
+                <h1 className=" text-5xl font-medium leading-tight text-primary">
+                  What is Lorem Ipsum?
+                </h1>
+                <footer className="block text-neutral-600 dark:text-neutral-400">
+                  - Someone famous in <cite>Source Title</cite>
+                </footer>
+              </div>
+              <div>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the release of Letraset sheets
+                containing Lorem Ipsum passages, and more recently with desktop
+                publishing software like Aldus PageMaker including versions of
+                Lorem Ipsum.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="hidden opacity-0 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
+          id="tabs-profile02"
+          role="tabpanel"
+          aria-labelledby="tabs-profile-tab02"
+        >
+          <div className="grid xl:grid-cols-6 p-12 gap-10">
+            <div className="xl:col-start-1 xl:col-span-2 self-center">
+              <img
+                src="https://tecdn.b-cdn.net/img/new/slides/041.jpg"
+                className="h-auto max-w-full rounded-lg"
+                alt="..."
+              />
+            </div>
+            <div className="xl:col-span-4">
+              {" "}
+              <div className="mb-4">
+                <h1 className=" text-5xl font-medium leading-tight text-primary">
+                  What is Lorem Ipsum?
+                </h1>
+                <footer className="block text-neutral-600 dark:text-neutral-400">
+                  - Someone famous in <cite>Source Title</cite>
+                </footer>
+              </div>
+              <div>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the release of Letraset sheets
+                containing Lorem Ipsum passages, and more recently with desktop
+                publishing software like Aldus PageMaker including versions of
+                Lorem Ipsum.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="hidden opacity-0 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
+          id="tabs-messages02"
+          role="tabpanel"
+          aria-labelledby="tabs-profile-tab02"
+        >
+          <div className="grid xl:grid-cols-6 p-12 gap-10">
+            <div className="xl:col-start-1 xl:col-span-2 self-center">
+              <img
+                src="https://tecdn.b-cdn.net/img/new/slides/041.jpg"
+                className="h-auto max-w-full rounded-lg"
+                alt="..."
+              />
+            </div>
+            <div className="xl:col-span-4">
+              {" "}
+              <div className="mb-4">
+                <h1 className=" text-5xl font-medium leading-tight text-primary">
+                  What is Lorem Ipsum?
+                </h1>
+                <footer className="block text-neutral-600 dark:text-neutral-400">
+                  - Someone famous in <cite>Source Title</cite>
+                </footer>
+              </div>
+              <div>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the release of Letraset sheets
+                containing Lorem Ipsum passages, and more recently with desktop
+                publishing software like Aldus PageMaker including versions of
+                Lorem Ipsum.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="hidden opacity-0 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
+          id="tabs-contact02"
+          role="tabpanel"
+          aria-labelledby="tabs-contact-tab02"
+        >
+          Tab 4 content
+        </div>
       </div>
     </div>
   );

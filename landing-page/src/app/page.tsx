@@ -8,7 +8,7 @@ import { Carousel } from "./components/Carousel";
 import { Gallery } from "./components/Gallery";
 import { CardTitle } from "./components/CardTitle";
 import { Tabs } from "./components/Tabs";
-import { ScrollerList } from "./components/scrollerList";
+import { ScrollerList } from "./components/ScrollerList";
 
 // const Gallery = dynamic(() => import("./components/Gallery"), {
 //   ssr: false,
@@ -33,7 +33,10 @@ const Home = () => {
   return (
     <div className="flex flex-col" style={{ backgroundColor: "white" }}>
       {/* <div className="scroll-watcher"></div> */}
+
       <HomeHeader />
+
+      {/* Centered cards */}
       <div className="grid grid-cols-6 gap-10 mb-12">
         <div className="col-start-1 col-span-3 xl:col-start-2 xl:col-span-1">
           <CardTitle
@@ -64,6 +67,7 @@ const Home = () => {
           />
         </div>
       </div>
+
       {/* <h2 className="text-center text-black text-6xl font-semibold mt-12">
         {" "}
         What we offer{" "}
@@ -76,6 +80,8 @@ const Home = () => {
           <Carousel style={{ backgroundColor: "white" }} />
         </div>
       </div> */}
+
+      {/* Banners */}
       <div className="grid grid-cols-6 mt-12 gap-10">
         {/* Banner 1 */}
         <div className="slideInLeft ml-5 mr-5 xl:ml-0 xl:mr-0 col-start-1 self-center col-span-6 xl:col-span-2 xl:col-start-2">
@@ -160,6 +166,8 @@ const Home = () => {
       </div>
 
       <HomeBody />
+
+      {/* Scroller lists */}
       <h2 className="text-center text-black text-6xl font-semibold mt-12">
         Our technologies
       </h2>
@@ -185,6 +193,8 @@ const Home = () => {
           */}
         </div>
       </div>
+
+      {/* specializations */}
       <div
         style={{
           width: "100%",
@@ -203,6 +213,79 @@ const Home = () => {
           Someone famous in <cite>Source Title</cite>
         </footer>
         <Tabs className="p-4 md:p-12 md:ml-12 md:mr-12" />
+      </div>
+
+      {/* meet the team */}
+      <div className="mb-12">
+        <h2 className="text-center text-black text-6xl font-semibold mt-12">
+          {" "}
+          Meet the team{" "}
+        </h2>
+        <footer className="block text-center mt-1 text-neutral-600 dark:text-neutral-400">
+          The team who made holtrack <cite>Possible</cite>
+        </footer>
+      </div>
+      <div className="p-12 grid grid-cols-2 md:grid-cols-3 justify-center xl:grid-cols-7 gap-10 mx-10">
+        <div className="xl:col-start-2">
+          <figure className="mb-4">
+            <img
+              src="https://mdbootstrap.com//img/Photos/Square/1.jpg"
+              className="h-auto max-w-full rounded-full"
+              alt=""
+            />
+            <figcaption className="text-xl text-center text-neutral-600 dark:text-neutral-400">
+              Delvin SUTIGONAL
+            </figcaption>
+          </figure>
+        </div>
+        <div className="">
+          <figure className="mb-4">
+            <img
+              src="https://mdbootstrap.com//img/Photos/Square/1.jpg"
+              className="h-auto max-w-full rounded-full"
+              alt=""
+            />
+            <figcaption className="text-sm text-center text-neutral-600 dark:text-neutral-400">
+              Arifin HADIYANTOL
+            </figcaption>
+          </figure>
+        </div>
+        <div className="">
+          <figure className="mb-4">
+            <img
+              src="https://mdbootstrap.com//img/Photos/Square/1.jpg"
+              className="h-auto max-w-full rounded-full"
+              alt=""
+            />
+            <figcaption className="text-sm text-center text-neutral-600 dark:text-neutral-400">
+              ChariMEK utasa
+            </figcaption>
+          </figure>
+        </div>
+        <div className="">
+          <figure className="mb-4">
+            <img
+              src="https://mdbootstrap.com//img/Photos/Square/1.jpg"
+              className="h-auto max-w-full rounded-full"
+              alt=""
+            />
+            <figcaption className="text-sm text-center text-neutral-600 dark:text-neutral-400">
+              ERICK GANTENG
+            </figcaption>
+          </figure>
+        </div>
+        <div className="">
+          <figure className="mb-4">
+            <img
+              src="https://mdbootstrap.com//img/Photos/Square/1.jpg"
+              className="h-auto max-w-full rounded-full"
+              alt=""
+            />
+            <figcaption className="text-sm text-center text-neutral-600 dark:text-neutral-400">
+              MAMAT SUGIYONO
+            </figcaption>
+          </figure>
+        </div>
       </div>
     </div>
   );

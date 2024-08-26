@@ -26,7 +26,10 @@ export const CardTitle: React.FC<CardTitle> = ({
   }, []);
 
   return (
-    <div className="hover:animate-pulse block rounded-lg bg-white shadow-secondary-1 dark:bg-surface-dark">
+    <div
+      style={{ ...style }}
+      className="hover:animate-pulse block rounded-lg bg-white shadow-secondary-1 dark:bg-surface-dark"
+    >
       <div
         className="relative overflow-hidden bg-cover bg-no-repeat"
         data-twe-ripple-init

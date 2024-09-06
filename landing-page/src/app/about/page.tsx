@@ -1,94 +1,185 @@
-import { Header } from "./components/Header";
-import { CardHorizontal } from "./components/CardHorizontal";
+import { Header } from "../components/Header";
+import { CardHorizontal } from "../components/CardHorizontal";
+import { CardBody } from "./components/CardBody";
+import { TestimonialCarousel } from "../components/TestimonialCarousel";
+import { Tabs } from "./components/Tabs";
+import { Form } from "../components/Form";
 
 export default function About() {
   return (
     <div style={{ backgroundColor: "#ffffff" }}>
-      <Header />
-      <div className="grid grid-cols-8">
+      <Header
+        Title="About Us"
+        Body="Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book."
+      />
+
+      {/* center card */}
+
+      <CardHorizontal
+        cardTitle="Need help?"
+        className="drop-shadow-xl"
+        style={{ marginTop: "-100px" }}
+      />
+
+      {/* content */}
+      <div
+        className="grid grid-cols-8 text-black"
+        style={{ paddingTop: "50px" }}
+      >
+        <div className="col-start-2 col-span-4 mb-4">
+          <h2 className="text-4xl font-semibold">
+            Holtrack Solution Integrator
+          </h2>
+        </div>
+        <div className="row-start-2 col-start-2 xl:col-start-2 col-span-6 xl:col-span-4 mb-6">
+          <h2 className="text-2xl font-semibold">
+            To assist your organization in reaching new levels of productivity,
+            efficiency, and accuracy, you need a true partner – not just a
+            vendor.
+          </h2>
+        </div>
+        <div className="row-start-3 col-start-2 xl:col-start-2 col-span-6 xl:col-span-3">
+          <h4 className="text-base font-light leading-relaxed">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </h4>
+        </div>
         <div
-          style={{ zIndex: "1000" }}
-          className="col-start-2 col-span-6 xl:col-start-3 xl:col-span-4"
+          style={{ paddingTop: "30px" }}
+          className="row-start-4 col-span-6 col-start-2"
         >
-          <CardHorizontal
-            cardTitle="Need help?"
-            className="drop-shadow-xl"
-            style={{ marginTop: "-100px" }}
+          <button
+            type="button"
+            data-twe-ripple-init
+            data-twe-ripple-color="light"
+            className="inline-block rounded bg-warning px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-warning-100 hover:shadow-primary-2 focus:bg-warning-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-warning-600 active:shadow-primary-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+          >
+            Place a solution request
+          </button>
+        </div>
+      </div>
+      <div>
+        <CardBody />
+      </div>
+
+      <h2 className="mt-12 text-4xl text-black text-center mb-12 font-semibold">
+        Hear what our customers have to say!
+      </h2>
+      <div className="pt-12 pb-12 grid grid-cols-8 gap-10">
+        <div className="col-start-2 col-span-6">
+          <TestimonialCarousel />
+        </div>
+      </div>
+
+      <div
+        style={{
+          paddingTop: "100px",
+          paddingBottom: "100px",
+          backgroundColor: "#EEEEEF",
+          clipPath: "polygon(0 0, 100% 10%, 100% 100%, 0 90%)",
+        }}
+      >
+        <h2 className="mt-12 text-4xl text-black text-center mb-4 font-semibold">
+          Our services
+        </h2>
+        <footer className="block text-center mb-8 text-neutral-600 dark:text-neutral-400">
+          Our in-house professional services group is here to support you every
+          step of the way. From project design, implementation, deployment, and
+          training to depot repair, help desk, and on-site services.
+        </footer>
+        <div className="pt-12 pb-12 grid grid-cols-8 gap-10">
+          <div className="col-start-2 col-span-6">
+            <Tabs />
+          </div>
+        </div>
+      </div>
+
+      <div
+        style={{ paddingTop: "50px", paddingBottom: "50px" }}
+        className="grid xl:grid-cols-8 gap-10"
+      >
+        <div className="text-black mx-12 xl:mx-0 xl:col-start-2 xl:col-span-3">
+          {" "}
+          <h2 className="text-4xl font-semibold mb-6">
+            Dedicated Customer support
+          </h2>
+          <h4 className="text-base font-light leading-relaxed">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.
+          </h4>
+        </div>
+        <div className="mx-12 self-center xl:mx-0 xl:col-start-5 xl:col-span-3">
+          <img
+            src="https://tecdn.b-cdn.net/img/new/slides/041.jpg"
+            className="rounded-lg h-auto max-w-full"
+            alt="..."
           />
         </div>
       </div>
+
       <div
-        style={{ display: "flex", flexDirection: "column" }}
-        className="mx-12"
+        style={{
+          backgroundColor: "#EEEEEF",
+          paddingTop: "50px",
+          paddingBottom: "50px",
+          clipPath: "polygon(0 10%, 100% 0, 100% 100%, 0 100%)",
+        }}
       >
-        <p style={{ textAlign: "justify", fontSize: "24px" }}>
-          The standard Lorem Ipsum passage, used since the 1500s "Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-          occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum." Section 1.10.32 of "de Finibus Bonorum et
-          Malorum", written by Cicero in 45 BC "Sed ut perspiciatis unde omnis
-          iste natus error sit voluptatem accusantium doloremque laudantium,
-          totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
-          quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-          voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-          consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-          Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-          consectetur, adipisci velit, sed quia non numquam eius modi tempora
-          incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut
-          enim ad minima veniam, quis nostrum exercitationem ullam corporis
-          suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis
-          autem vel eum iure reprehenderit qui in ea voluptate velit esse quam
-          nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
-          voluptas nulla pariatur?" 1914 translation by H. Rackham "But I must
-          explain to you how all this mistaken idea of denouncing pleasure and
-          praising pain was born and I will give you a complete account of the
-          system, and expound the actual teachings of the great explorer of the
-          truth, the master-builder of human happiness. No one rejects,
-          dislikes, or avoids pleasure itself, because it is pleasure, but
-          because those who do not know how to pursue pleasure rationally
-          encounter consequences that are extremely painful. Nor again is there
-          anyone who loves or pursues or desires to obtain pain of itself,
-          because it is pain, but because occasionally circumstances occur in
-          which toil and pain can procure him some great pleasure. To take a
-          trivial example, which of us ever undertakes laborious physical
-          exercise, except to obtain some advantage from it? But who has any
-          right to find fault with a man who chooses to enjoy a pleasure that
-          has no annoying consequences, or one who avoids a pain that produces
-          no resultant pleasure?" Section 1.10.33 of "de Finibus Bonorum et
-          Malorum", written by Cicero in 45 BC "At vero eos et accusamus et
-          iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-          deleniti atque corrupti quos dolores et quas molestias excepturi sint
-          occaecati cupiditate non provident, similique sunt in culpa qui
-          officia deserunt mollitia animi, id est laborum et dolorum fuga. Et
-          harum quidem rerum facilis est et expedita distinctio. Nam libero
-          tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo
-          minus id quod maxime placeat facere possimus, omnis voluptas assumenda
-          est, omnis dolor repellendus. Temporibus autem quibusdam et aut
-          officiis debitis aut rerum necessitatibus saepe eveniet ut et
-          voluptates repudiandae sint et molestiae non recusandae. Itaque earum
-          rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus
-          maiores alias consequatur aut perferendis doloribus asperiores
-          repellat." 1914 translation by H. Rackham "On the other hand, we
-          denounce with righteous indignation and dislike men who are so
-          beguiled and demoralized by the charms of pleasure of the moment, so
-          blinded by desire, that they cannot foresee the pain and trouble that
-          are bound to ensue; and equal blame belongs to those who fail in their
-          duty through weakness of will, which is the same as saying through
-          shrinking from toil and pain. These cases are perfectly simple and
-          easy to distinguish. In a free hour, when our power of choice is
-          untrammelled and when nothing prevents our being able to do what we
-          like best, every pleasure is to be welcomed and every pain avoided.
-          But in certain circumstances and owing to the claims of duty or the
-          obligations of business it will frequently occur that pleasures have
-          to be repudiated and annoyances accepted. The wise man therefore
-          always holds in these matters to this principle of selection: he
-          rejects pleasures to secure other greater pleasures, or else he
-          endures pains to avoid worse pains."
-        </p>
+        <h2 className="mt-12 text-4xl xl:text-6xl text-black text-center mb-4 font-semibold">
+          Have a question?
+        </h2>
+        <footer className="block text-center mb-8 text-neutral-600 dark:text-neutral-400">
+          Feel free to ask us anything. We are glad to be of service!
+        </footer>
+        <div
+          style={{ paddingBottom: "50px" }}
+          className="mx-10 xl:mx-0 xl:grid xl:grid-cols-8 gap-10"
+        >
+          <div className="col-start-2 col-span-3 self-center text-center">
+            <img
+              src="https://tecdn.b-cdn.net/img/new/slides/041.jpg"
+              style={{ width: "435px", height: "130px" }}
+              alt="..."
+              className="mx-auto rounded-lg"
+            />
+            <div>
+              <h2 className="mt-5 text-2xl text-black mb-4 font-semibold">
+                Give us a call for a free consultation!
+              </h2>
+              <p className="text-black text-justify">
+                Request more information about a particular technology, inquire
+                about general pricing or demo equipment, or schedule a no-cost
+                consultation to discuss your business challenges.
+              </p>
+              <p className="text-black text-justify mt-4">
+                Simply call +62 (822)-5888-8701, email{" "}
+                <span style={{ textDecoration: "underline", color: "#E4A11B" }}>
+                  {" "}
+                  holtech1064@gmail.com
+                </span>
+                , or fill out our form! We’re here to help.
+              </p>
+            </div>
+          </div>
+          <div className="mt-6 xl:mt-0 col-start-5 col-span-3">
+            <h2 className="mt-5 text-2xl text-center mb-10 text-black mb-4 font-semibold">
+              Or send us your question and we will get back to you!
+            </h2>
+            <Form />
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,4 +1,9 @@
-export const Header = () => {
+interface HeaderProps {
+  Title: string;
+  Body: string;
+}
+
+export const Header: React.FC<HeaderProps> = ({ Title, Body }) => {
   return (
     <div
       style={{
@@ -9,22 +14,15 @@ export const Header = () => {
       className="relative top-20 h-[600px] overflow-hidden rounded-lg bg-[url('https://media.istockphoto.com/id/1347197740/photo/business-people-having-casual-discussion-during-meeting.jpg?s=612x612&w=0&k=20&c=HSnFzyuwUDZFCehBv0W0jjRfwY1eKjGV1Lkek8lXY2Q=')] bg-cover bg-no-repeat text-white"
     >
       <div className="absolute bottom-0 left-0 right-0 top-0 overflow-hidden bg-black/60 bg-fixed">
-        <div className="flex justify-center">
-          <div
-            style={{ marginTop: "150px" }}
-            className="text-white grid grid-cols-8 gap-4"
-          >
-            <div className="col-start-2 col-span-3">
-              <h2 className="text-4xl font-semibold">About us</h2>
-            </div>
-            <div className="row-start-2 col-start-2 xl:col-start-2 col-span-6 xl:col-span-3">
-              <h4 className="text-xl font-semibold">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
-              </h4>
-            </div>
+        <div
+          style={{ marginTop: "150px" }}
+          className="text-white grid grid-cols-8 gap-4"
+        >
+          <div className="col-start-2 col-span-3">
+            <h2 className="text-4xl font-semibold">{Title}</h2>
+          </div>
+          <div className="row-start-2 col-start-2 xl:col-start-2 col-span-6 xl:col-span-3">
+            <h4 className="text-xl font-semibold">{Body}</h4>
           </div>
         </div>
       </div>

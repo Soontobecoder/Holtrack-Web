@@ -197,12 +197,10 @@ const Home = () => {
       {/* specializations */}
       <div
         style={{
-          width: "100%",
-          height: "auto",
           clipPath: "polygon(0 0, 100% 10%, 100% 100%, 0 90%)",
           backgroundColor: "#D2D8DC",
           paddingBottom: "150px",
-          paddingTop: "150px",
+          paddingTop: "100px",
         }}
       >
         <h2 className="text-center bg text-black text-6xl font-semibold mt-12">
@@ -258,7 +256,7 @@ const Home = () => {
               alt=""
             />
             <figcaption className="text-sm text-center text-neutral-600 dark:text-neutral-400">
-              ChariMEK utasa
+              ChariNTOL utasa
             </figcaption>
           </figure>
         </div>
@@ -270,7 +268,7 @@ const Home = () => {
               alt=""
             />
             <figcaption className="text-sm text-center text-neutral-600 dark:text-neutral-400">
-              ERICK GANTENG
+              ERICK PALING GANTENG SEJAGAT RAYA
             </figcaption>
           </figure>
         </div>

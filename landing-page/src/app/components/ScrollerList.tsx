@@ -3,6 +3,7 @@ import "../home.css";
 
 interface ScrollerProps {
   dataAnimated: string;
+  className?: string;
 }
 
 const imageList = [
@@ -40,9 +41,12 @@ const imageList = [
   },
 ];
 
-export const ScrollerList: React.FC<ScrollerProps> = ({ dataAnimated }) => {
+export const ScrollerList: React.FC<ScrollerProps> = ({
+  dataAnimated,
+  className,
+}) => {
   return (
-    <div data-animated={dataAnimated} className="scroller">
+    <div data-animated={dataAnimated} className={className + " scroller"}>
       <ul className="tag-list scroller__inner">
         {imageList.map((item, index) => (
           <li key={index}>

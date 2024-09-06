@@ -1,17 +1,23 @@
+import Image from "next/image";
+import Logo from "../assets/LOGO_White color.png";
+
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 mt-12">
+    <footer className="bg-warning-500 ">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <a href="https://flowbite.com/" className="flex items-center">
-              <img
-                src="https://flowbite.com/docs/images/logo.svg"
-                className="h-8 me-3"
-                alt="FlowBite Logo"
+              <Image
+                alt="Logo"
+                width={0}
+                height={0}
+                src={Logo}
+                className="me-3 h-8"
+                style={{ width: "auto", height: "50px" }}
               />
               <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
-                Flowbite
+                Holtrack
               </span>
             </a>
           </div>

@@ -16,7 +16,7 @@ export const Tabs: React.FC<TabProps> = ({ style, className }) => {
     init();
   }, []);
   return (
-    <div className={className + ""}>
+    <div className={className + ""} style={style}>
       {/* nav header */}
       <ul
         className="flex list-none flex-row flex-wrap border-b-0 ps-0"
@@ -34,7 +34,7 @@ export const Tabs: React.FC<TabProps> = ({ style, className }) => {
             aria-controls="tabs-home02"
             aria-selected="true"
           >
-            Home
+            About Us
           </a>
         </li>
         <li role="presentation" className="flex-grow basis-0 text-center">
@@ -47,7 +47,7 @@ export const Tabs: React.FC<TabProps> = ({ style, className }) => {
             aria-controls="tabs-profile02"
             aria-selected="false"
           >
-            Profile
+            Our Mission
           </a>
         </li>
         <li role="presentation" className="flex-grow basis-0 text-center">
@@ -60,20 +60,7 @@ export const Tabs: React.FC<TabProps> = ({ style, className }) => {
             aria-controls="tabs-messages02"
             aria-selected="false"
           >
-            Messages
-          </a>
-        </li>
-        <li role="presentation" className="flex-grow basis-0 text-center">
-          <a
-            href="#tabs-contact02"
-            className="disabled pointer-events-none my-2 block border-x-0 border-b-2 border-t-0 border-transparent bg-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-400 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent dark:text-neutral-600"
-            data-twe-toggle="pill"
-            data-twe-target="#tabs-contact02"
-            role="tab"
-            aria-controls="tabs-contact02"
-            aria-selected="false"
-          >
-            Contact
+            Our Vision
           </a>
         </li>
       </ul>

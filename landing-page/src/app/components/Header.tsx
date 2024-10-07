@@ -1,5 +1,7 @@
+import { ReactNode } from "react";
+
 interface HeaderProps {
-  Title: string;
+  Title: ReactNode;
   Body: string;
 }
 
@@ -18,7 +20,7 @@ export const Header: React.FC<HeaderProps> = ({ Title, Body }) => {
           style={{ marginTop: "150px" }}
           className="text-white grid grid-cols-8 gap-4"
         >
-          <div className="col-start-2 col-span-3">
+          <div className="col-start-2 col-span-6 xl:col-start-2 xl:col-span-3">
             <h2 className="text-4xl font-semibold">{Title}</h2>
           </div>
           <div className="row-start-2 col-start-2 xl:col-start-2 col-span-6 xl:col-span-3">

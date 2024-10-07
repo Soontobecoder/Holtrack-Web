@@ -3,7 +3,7 @@ import Logo from "../assets/LOGO_White color.png";
 
 export default function Footer() {
   return (
-    <footer className="bg-warning-500 ">
+    <footer className="bg-warning-400 ">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
@@ -16,14 +16,14 @@ export default function Footer() {
                 className="me-3 h-8"
                 style={{ width: "auto", height: "50px" }}
               />
-              <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
-                Holtrack
+              <span className="self-center text-2xl font-semibold whitespace-nowrap text-black">
+                HOLTRACK
               </span>
             </a>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase text-white">
+              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase text-black">
                 Resources
               </h2>
               <ul className="text-gray-500 text-gray-400 font-medium">
@@ -43,7 +43,7 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase text-white">
+              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase text-black">
                 Follow us
               </h2>
               <ul className="text-gray-500 text-gray-400 font-medium">
@@ -66,7 +66,7 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase text-white">
+              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase text-black">
                 Legal
               </h2>
               <ul className="text-gray-500 text-gray-400 font-medium">

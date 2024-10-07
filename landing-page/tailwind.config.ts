@@ -2,7 +2,7 @@ import type { Config } from "tailwindcss";
 /**
  * @type {import('@types/tailwindcss/tailwind-config').TailwindConfig}
  */
-
+const flowbite = require("flowbite-react/tailwind");
 const config: Config = {
   content: [
     "./node_modules/tw-elements/js/**/*.js",
@@ -14,6 +14,7 @@ const config: Config = {
     "./src/**/*.{html,js}",
     "./pages/**/*.{ts,tsx}",
     "./public/**/*.html",
+    flowbite.content(),
   ],
   theme: {
     extend: {

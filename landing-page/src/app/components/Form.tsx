@@ -12,8 +12,16 @@ export const Form = () => {
 
   useEffect(() => {
     const init = async () => {
-      const { Input, Ripple, initTWE } = await import("tw-elements");
-      initTWE({ Input, Ripple });
+      try {
+        const { Input, Ripple, initTWE } = await import("tw-elements");
+        initTWE({ Input, Ripple });
+        const elements = document.querySelectorAll(
+          "[data-twe-input-wrapper-init]"
+        );
+        console.log("Elements to initialize:", elements);
+      } catch (error) {
+        console.error("TWE initialization failed", error);
+      }
     };
     init();
   }, []);

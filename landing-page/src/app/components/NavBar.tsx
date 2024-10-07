@@ -46,18 +46,17 @@ export default function Navbar() {
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Pricing", href: "/pricing" },
-    { name: "Contact", href: "/contact" },
+    { name: "Product", href: "/product" },
   ];
 
   return (
     <nav
-      className={`bg-white fixed top-0 z-50 w-full transition-transform duration-300 transform ${
+      className={`bg-white fixed top-0 z-50 w-full border-2 transition-transform duration-300 transform ${
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          {/* ganti image logo */}
           <Image
             alt="Logo"
             width={0}
@@ -164,9 +163,11 @@ export default function Navbar() {
           </ul>
         </div>
         <div className="mx-auto md:mx-0 sm:mt-0 mt-5">
-          <button
+          <a
             type="button"
-            className=" flex justify-between items-start rounded-full bg-warning px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-warning-3 transition duration-150 ease-in-out hover:bg-warning-accent-300 hover:shadow-warning-2 focus:bg-warning-accent-300 focus:shadow-warning-2 focus:outline-none focus:ring-0 active:bg-warning-600 active:shadow-warning-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+            href="https://wa.me/17789979115"
+            target="blank"
+            className="hover:cursor-pointer flex justify-between items-start rounded-full bg-warning px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-warning-3 transition duration-150 ease-in-out hover:bg-warning-accent-300 hover:shadow-warning-2 focus:bg-warning-accent-300 focus:shadow-warning-2 focus:outline-none focus:ring-0 active:bg-warning-600 active:shadow-warning-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
           >
             Talk to an expert
             <svg
@@ -181,7 +182,7 @@ export default function Navbar() {
                 clip-rule="evenodd"
               />
             </svg>
-          </button>
+          </a>
         </div>
       </div>
     </nav>

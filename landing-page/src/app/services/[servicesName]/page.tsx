@@ -199,7 +199,7 @@ export default function ServiceDetails({
         }}
       >
         <h2 className="mt-12 text-4xl xl:text-6xl text-black text-center mb-4 font-semibold">
-          Have a question?
+          Have a <span className="text-warning">Question?</span>
         </h2>
         <footer className="block text-center mb-8 text-neutral-600 dark:text-neutral-400">
           Feel free to ask us anything. We are glad to be of service!
@@ -217,12 +217,12 @@ export default function ServiceDetails({
             />
             <div>
               <h2 className="mt-5 text-2xl text-black mb-4 font-semibold">
-                Give us a call for a free consultation!
+                Get Started Today
               </h2>
               <p className="text-black text-justify">
-                Request more information about a particular technology, inquire
-                about general pricing or demo equipment, or schedule a no-cost
-                consultation to discuss your business challenges.
+                Ready to transform your operations with RFID technology? Contact
+                us to learn how Holtrack can deliver the solutions you need to
+                succeed.
               </p>
               <p className="text-black text-justify mt-4">
                 Simply call +62 (822)-5888-8701, email{" "}

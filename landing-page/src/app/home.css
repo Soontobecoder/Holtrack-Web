@@ -1,0 +1,172 @@
+/* demo purposes for scrolling indicator */
+/* .scroll-watcher {
+  height: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: lime;
+  transform-origin: left;
+  width: 100%;
+  scale: 0 1;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+} */
+/* use linear for preventing weird scroll animation */
+/* @keyframes scroll-watcher {
+  to {
+    scale: 1 1;
+  }
+} */
+
+/* scroll animation image fading in when viewport touches the image */
+/* article > img {
+  animation: fade-in linear;
+  animation-timeline: view();
+  animation-range-start: cover;
+  animation-range-end: 700px;
+}
+
+@keyframes fade-in {
+  from {
+    scale: 0.8;
+    opacity: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+} */
+
+/* scroll animation image fading in when viewport fully contains the image */
+/* article > img {
+  scale: .8; opacity: 0;
+  animation: fade-in linear;
+  animation-timeline: view();
+  animation-range: contain 100px; >>> 100px is an extra offset after it contains the image <<<
+}
+
+@keyframes fade-in {
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+} */
+
+/* scroll animation image fading in with fixed viewport */
+
+@media (prefers-reduced-motion: no-preference) {
+  .pop-in {
+    scale: 0.8;
+    opacity: 0;
+    animation: fade-in 2s linear forwards;
+    animation-timeline: view();
+    animation-range: 250px 350px;
+  }
+
+  @keyframes fade-in {
+    to {
+      scale: 1;
+      opacity: 1;
+    }
+  }
+
+  .slideInLeft {
+    position: relative;
+    scale: 0.8;
+    opacity: 0;
+    animation: slide-in-left 2s forwards;
+    animation-timeline: view();
+    animation-range: 250px 500px;
+  }
+
+  @keyframes slide-in-left {
+    0% {
+      transform: translateX(-40%); /* Start off-screen to the left */
+      scale: 0.8;
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0); /* End at the final position */
+      scale: 1;
+      opacity: 1;
+    }
+  }
+
+  .slideInRight {
+    position: relative;
+    scale: 0.8;
+    opacity: 0;
+    animation: slide-in-right 2s forwards;
+    animation-timeline: view();
+    animation-range: 250px 500px;
+  }
+
+  @keyframes slide-in-right {
+    0% {
+      transform: translateX(50%); /* Start off-screen to the left */
+      scale: 0.8;
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0); /* End at the final position */
+      scale: 1;
+      opacity: 1;
+    }
+  }
+}
+
+/* .scroller {
+  max-width: 1800px;
+} */
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller__inner {
+  padding-block: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  flex-wrap: nowrap;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+.scroller[data-animated="true"] .scroller__inner:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-100% / 2));
+  }
+}
+/* slide in animation for when image enters the viewport */
+/* 
+.banner {
+    scale: 0.8;
+    opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: entry; >>> or can be exit for reverse effect <<<
+  }
+
+  @keyframes fade-in {
+    to {
+      scale: 1;
+      opacity: 1;
+    }
+  }
+*/

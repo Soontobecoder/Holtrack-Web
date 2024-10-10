@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "assetType": "RFIDTag",
+    "device": {}
+  },
+  {
+    "id": 2,
+    "assetType": "GateWay",
+    "device": {}
+  },
+  {
+    "id": 3,
+    "assetType": "HandheldReader",
+    "device": {}
+  },
+  {
+    "id": 4,
+    "assetType": "FixedReader",
+    "device": {}
+  },
+  {
+    "id": 5,
+    "assetType": "Printer",
+    "device": {}
+  },
+  {
+    "id": 6,
+    "assetType": "Antenna",
+    "device": {}
+  }
+]

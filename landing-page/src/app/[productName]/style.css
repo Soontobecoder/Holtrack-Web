@@ -1,0 +1,6 @@
+@media (min-width: 1279px) {
+  .container {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+}

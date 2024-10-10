@@ -98,7 +98,7 @@ export const CardHorizontal: React.FC<CardHorizontal> = ({
                     data-twe-dropdown-item-ref
                     onClick={() => onClick("contact")}
                   >
-                    I'm interested in RFID Technologies
+                    I&apos;m interested in RFID Technologies
                   </a>
                 </li>
                 <li>

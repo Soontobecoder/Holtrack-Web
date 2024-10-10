@@ -183,7 +183,7 @@ export default function ServiceDetails({
       <h2 className="mt-12 text-4xl text-black text-center mb-12 font-semibold">
         Hear what our customers have to say!
       </h2>
-      <div className="pt-12 pb-12 grid grid-cols-8 gap-10">
+      <div className="pt-[100px] pb-[100px] xl:pt-[150px] xl:pb-[150px] grid grid-cols-8 gap-10">
         <div className="col-start-2 col-span-6">
           <TestimonialCarousel />
         </div>

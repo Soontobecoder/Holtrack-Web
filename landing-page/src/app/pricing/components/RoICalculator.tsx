@@ -87,10 +87,7 @@ export const RoICalculator: React.FC<Props> = ({ className, style }) => {
         <div>
           <div className="flex justify-between mb-2">
             <div className="w-2/3">
-              <label
-                for="Inventory turns"
-                className="inline-block text-neutral-700 text-lg"
-              >
+              <label className="inline-block text-neutral-700 text-lg">
                 Inventory turns per year
               </label>
               <footer className="block text-neutral-600 text-xs">
@@ -130,10 +127,7 @@ export const RoICalculator: React.FC<Props> = ({ className, style }) => {
         <div>
           <div className="mt-4 flex justify-between mb-2">
             <div className="w-2/3">
-              <label
-                for="Items in stock"
-                className="inline-block text-neutral-700 text-lg"
-              >
+              <label className="inline-block text-neutral-700 text-lg">
                 Items in Stock
               </label>
               <footer className="block text-neutral-600 text-xs">
@@ -172,10 +166,7 @@ export const RoICalculator: React.FC<Props> = ({ className, style }) => {
         <div>
           <div className="mt-4 flex justify-between mb-2">
             <div className="w-2/3">
-              <label
-                for="Avg value"
-                className="inline-block text-neutral-700 text-lg"
-              >
+              <label className="inline-block text-neutral-700 text-lg">
                 Average Value of Items
               </label>
               <footer className="block text-neutral-600 text-xs">
@@ -213,10 +204,7 @@ export const RoICalculator: React.FC<Props> = ({ className, style }) => {
         {/* Average RFID cost */}
         <div className="mt-6 flex justify-between mb-2">
           <div className="w-2/3">
-            <label
-              for="Items in stock"
-              className="inline-block text-neutral-700 text-lg"
-            >
+            <label className="inline-block text-neutral-700 text-lg">
               RFID Cost
             </label>
             <footer className="block text-neutral-600 text-xs">
@@ -234,10 +222,7 @@ export const RoICalculator: React.FC<Props> = ({ className, style }) => {
         {/* Average RFID revenue increase */}
         <div className="mt-6 flex justify-between mb-2">
           <div className="w-2/3">
-            <label
-              for="Items in stock"
-              className="inline-block text-neutral-700 text-lg"
-            >
+            <label className="inline-block text-neutral-700 text-lg">
               RFID Revenue Increase
             </label>
             <footer className="block text-neutral-600 text-xs">
@@ -256,10 +241,7 @@ export const RoICalculator: React.FC<Props> = ({ className, style }) => {
         {/* Average RFID revenue loss */}
         <div className="mt-6 flex justify-between mb-2">
           <div className="w-2/3">
-            <label
-              for="Items in stock"
-              className="inline-block text-neutral-700 text-lg"
-            >
+            <label className="inline-block text-neutral-700 text-lg">
               RFID Loss Reduce
             </label>
             <footer className="block text-neutral-600 text-xs">

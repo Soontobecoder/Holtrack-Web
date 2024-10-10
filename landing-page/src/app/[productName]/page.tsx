@@ -111,7 +111,7 @@ export default function ProductDetails({
   const router = useRouter();
 
   const data: Data | undefined = Datas.find(
-    (el) => el.assetType == params.productName
+    (el): el is Data => el.assetType == params.productName
   );
 
   useEffect(() => {

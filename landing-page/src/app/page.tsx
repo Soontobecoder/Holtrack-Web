@@ -189,6 +189,7 @@ const Home = () => {
 
       {/* Why Us? */}
       <div
+        id="why"
         style={{
           clipPath: "polygon(0 0, 100% 10%, 100% 100%, 0 90%)",
           backgroundColor: "#D2D8DC",

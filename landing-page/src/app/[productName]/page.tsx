@@ -5,6 +5,8 @@ import { useEffect } from "react";
 import { Header } from "./components/Header";
 import { BreadCrumb } from "./components/BreadCrumb";
 import { ProductCard } from "./components/ProductCard";
+import { ImageSlider } from "./components/ImageSlider";
+import "./style.css";
 
 interface Data {
   id: number;
@@ -125,16 +127,25 @@ export default function ProductDetails({
   const renderDetails = () => {
     switch (data.assetType) {
       case "RFIDTag":
-        const rfidTag = data as RFIDTag;
+        const rfidTag = data as unknown as RFIDTag;
         return (
-          <div>
+          <div className="xl:grid grid-cols-8">
+            <div className="col-span-4">
+              <h2 className="text-2xl font-bold mb-4">Slideshow Indicators</h2>
+              <p className="mb-6">
+                Using images to indicate how many slides there are in the
+                slideshow, and highlight the image the user is currently
+                viewing.
+              </p>
+              <ImageSlider />
+            </div>
             <h1>{rfidTag.name}</h1>
             <p>{rfidTag.dimension}</p>
             {/* render other properties specific to RFIDTag */}
           </div>
         );
       case "Antenna":
-        const antenna = data as Antenna;
+        const antenna = data as unknown as Antenna;
         return (
           <div>
             <h1>{antenna.name}</h1>
@@ -143,7 +154,7 @@ export default function ProductDetails({
           </div>
         );
       case "FixedReader":
-        const fixedReader = data as FixedReader;
+        const fixedReader = data as unknown as FixedReader;
         return (
           <div>
             <h1>{fixedReader.name}</h1>
@@ -152,7 +163,7 @@ export default function ProductDetails({
           </div>
         );
       case "GateWay":
-        const gateWay = data as GateWay;
+        const gateWay = data as unknown as GateWay;
         return (
           <div>
             <h1>{gateWay.name}</h1>
@@ -170,10 +181,10 @@ export default function ProductDetails({
     <div style={{ backgroundColor: "white", color: "black" }}>
       <Header Title="Products" />
       <BreadCrumb url={data.assetType} />
-      <div className="xl:grid px-[5%] pt-12 grid-cols-8 gap-4">
+      <div className="xl:grid pt-12 grid-cols-8 gap-4">
         <div className="col-span-2 flex flex-col items-center xl:border-r-4">
           <h1 className="text-center text-xl"> Explore our Other Products</h1>
-          <div className="xl:block flex gap-10 w-full xl:w-max overflow-x-scroll xl:overflow-hidden pt-5 py-4">
+          <div className="container xl:block px-2 flex gap-10 w-full xl:h-screen xl:w-max xl:overflow-y-scroll overflow-x-scroll xl:overflow-x-hidden mt-4">
             {Datas.map(
               (item, index) =>
                 item.assetType !== params.productName && (
@@ -187,7 +198,7 @@ export default function ProductDetails({
             )}
           </div>
         </div>
-        <div>{renderDetails()}</div>
+        <div className="col-span-6">{renderDetails()}</div>
       </div>
     </div>
   );

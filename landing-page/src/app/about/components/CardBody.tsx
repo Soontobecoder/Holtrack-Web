@@ -17,28 +17,30 @@ export const CardBody: React.FC<CardProps> = ({ style, className }) => {
       }}
       className={className + " grid xl:grid-cols-8 gap-10"}
     >
-      <div className="self-center mx-12 xl:mx-0 xl:col-start-2 xl:col-span-3">
+      <div className="self-center mx-12 xl:mx-auto xl:col-start-2 xl:col-span-3">
         {" "}
         <img
-          src="https://tecdn.b-cdn.net/img/new/slides/041.jpg"
-          className="rounded-lg h-auto max-w-full"
+          src="https://plus.unsplash.com/premium_photo-1661764559869-f6052a14b4c9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          className="rounded-lg"
           alt="..."
+          style={{ width: "600px" }}
         />
       </div>
-      <div className="text-black mx-12 xl:mx-0 xl:col-start-5 xl:col-span-3">
+      <div className="text-black flex flex-col mx-12 xl:mx-0 xl:col-start-5 xl:col-span-3">
         <h2 className="text-4xl font-semibold mb-6">
-          Dedicated Customer support
+          Dedicated <span className="text-warning"> Customer Support </span>
         </h2>
-        <h4 className="text-base font-light leading-relaxed">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
+        <h4 className="my-auto text-xl font-light leading-relaxed">
+          Our Dedicated Customer Support ensures that you’re never alone in
+          managing your technology. We provide personalized assistance tailored
+          to your unique needs, offering expert guidance from the initial setup
+          to ongoing maintenance. Whether you need troubleshooting help,
+          technical advice, or hands-on support, our knowledgeable team is
+          available to ensure your operations run smoothly and efficiently.
+          We&apos;re committed to delivering timely solutions that keep your
+          business moving forward, minimizing downtime and maximizing
+          productivity. Your success is our priority, and we&apos;re here to
+          back you every step of the way.
         </h4>
       </div>
     </div>

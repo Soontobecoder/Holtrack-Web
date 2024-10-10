@@ -1,10 +1,13 @@
+import { CSSProperties } from "react";
+
 interface Props {
   className?: string;
+  style?: CSSProperties;
 }
 
-export const ProductCard: React.FC<Props> = ({ className }) => {
+export const ProductCard: React.FC<Props> = ({ className, style }) => {
   return (
-    <div className={className + " py-4"}>
+    <div style={style} className={className + " py-4"}>
       <img
         src="https://tecdn.b-cdn.net/img/new/standard/city/041.webp"
         className="h-auto xl:max-w-xs rounded-lg shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30"

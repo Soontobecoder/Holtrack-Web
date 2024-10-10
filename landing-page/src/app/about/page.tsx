@@ -14,10 +14,7 @@ export default function About() {
             <span className="text-warning">About</span> Us
           </>
         }
-        Body="Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book."
+        Body="We're a technology company specializing in RFID solutions, serving industries like retail and warehousing. Our key products include RFID tags, readers, and integrated management software that streamline inventory automation, reducing time, labor, and scanning errors, especially with high-volume goods."
       />
 
       {/* center card */}
@@ -35,22 +32,24 @@ export default function About() {
       >
         <div className="col-start-2 col-span-4 mb-4">
           <h2 className="text-4xl font-semibold">
-            Holtrack Solution Integrator
+            <span className="text-warning">Holtrack </span>Solution Integrator
           </h2>
         </div>
         <div className="row-start-2 col-start-2 xl:col-start-2 col-span-6 xl:col-span-4 mb-6">
           <h2 className="text-2xl font-semibold">
-            To assist your organization in reaching new levels of productivity,
-            efficiency, and accuracy, you need a true partner – not just a
-            vendor.
+            To assist your <span className="text-warning"> business </span>in
+            achieving greater productivity, efficiency, and accuracy, you need a
+            <span className="text-warning"> true partner </span> – not just a
+            supplier.
           </h2>
         </div>
         <div className="row-start-3 col-start-2 xl:col-start-2 col-span-6 xl:col-span-3">
           <h4 className="text-base font-light leading-relaxed">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            Through our strong partnerships with manufacturers and our dedicated
+            in-house technical team, we offer clients expert, personalized
+            support for any project. From on-site discovery and design to device
+            support and repair, we’re here to ensure your technology investments
+            are fully supported.
           </h4>
         </div>
         <div
@@ -63,7 +62,7 @@ export default function About() {
             data-twe-ripple-color="light"
             className="inline-block rounded bg-warning px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-warning-100 hover:shadow-primary-2 focus:bg-warning-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-warning-600 active:shadow-primary-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
           >
-            Place a solution request
+            <a href="/contact">Place a solution request</a>
           </button>
         </div>
       </div>
@@ -71,10 +70,11 @@ export default function About() {
         <CardBody />
       </div>
 
-      <h2 className="mt-12 text-4xl text-black text-center mb-12 font-semibold">
-        Hear what our customers have to say!
+      <h2 className="pt-[100px] xl:pt-[150px] text-4xl text-black text-center mb-12 font-semibold">
+        Hear Our <span className="text-warning"> Clients</span> satisfied
+        feedbacks!
       </h2>
-      <div className="pt-12 pb-12 grid grid-cols-8 gap-10">
+      <div className="pb-[100px] xl:pb-[150px] grid grid-cols-8 gap-10">
         <div className="col-start-2 col-span-6">
           <TestimonialCarousel />
         </div>
@@ -89,46 +89,46 @@ export default function About() {
         }}
       >
         <h2 className="mt-12 text-4xl text-black text-center mb-4 font-semibold">
-          Our services
+          Our <span className="text-warning"> Services </span>
         </h2>
-        <footer className="block text-center mb-8 text-neutral-600 dark:text-neutral-400">
+        <footer className="xl:px-[450px] block text-center mb-8 text-neutral-600 dark:text-neutral-400">
           Our in-house professional services group is here to support you every
           step of the way. From project design, implementation, deployment, and
           training to depot repair, help desk, and on-site services.
         </footer>
-        <div className="pt-12 pb-12 grid grid-cols-8 gap-10">
+        <div className="pb-12 grid grid-cols-8 gap-10">
           <div className="col-start-2 col-span-6">
             <Tabs />
           </div>
         </div>
       </div>
 
+      {/* Second body */}
       <div
         style={{ paddingTop: "50px", paddingBottom: "50px" }}
         className="grid xl:grid-cols-8 gap-10"
       >
-        <div className="text-black mx-12 xl:mx-0 xl:col-start-2 xl:col-span-3">
+        <div className="text-black flex flex-col justify-evenly mx-12 xl:mx-0 xl:col-start-2 xl:col-span-3">
           {" "}
           <h2 className="text-4xl font-semibold mb-6">
-            Dedicated Customer support
+            Full Client <span className="text-warning"> Satisfaction</span>
           </h2>
-          <h4 className="text-base font-light leading-relaxed">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
+          <h4 className="text-xl font-light leading-relaxed">
+            Our top priority is Full Client Satisfaction. We are committed to
+            delivering exceptional service, ensuring that every solution we
+            provide meets your unique needs. From project inception to ongoing
+            support, we work closely with you to guarantee a seamless
+            experience, addressing any concerns promptly and effectively. Your
+            success is our success, and we go the extra mile to ensure complete
+            satisfaction with every interaction.
           </h4>
         </div>
         <div className="mx-12 self-center xl:mx-0 xl:col-start-5 xl:col-span-3">
           <img
-            src="https://tecdn.b-cdn.net/img/new/slides/041.jpg"
-            className="rounded-lg h-auto max-w-full"
+            src="https://images.unsplash.com/photo-1521790797524-b2497295b8a0?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            className="rounded-lg mx-auto"
             alt="..."
+            style={{ width: "600px" }}
           />
         </div>
       </div>
@@ -144,7 +144,7 @@ export default function About() {
         <h2 className="mt-12 text-4xl xl:text-6xl text-black text-center mb-4 font-semibold">
           Have a <span className="text-warning">Question?</span>
         </h2>
-        <footer className="block text-center mb-8 text-neutral-600 dark:text-neutral-400">
+        <footer className="block text-center font-semibold mb-8 text-neutral-600 dark:text-neutral-400">
           Feel free to ask us anything. We are glad to be of service!
         </footer>
         <div

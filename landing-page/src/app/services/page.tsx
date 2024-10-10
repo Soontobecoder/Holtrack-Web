@@ -244,7 +244,7 @@ export default function Services() {
             </div>
             <div className="col-start-2 col-span-6 md:col-span-2 md:col-start-6">
               <Card
-                cardTitle="Data Analytics and Reporting"
+                cardTitle="Data Analytics & Reporting"
                 cardBody="Transform data into actionable insights with our advanced analytics and reporting tools. Holtrack’s RFID solutions collect and analyze data in real-time, providing you with valuable insights to make informed decisions and optimize your operations."
                 link="/service/data_analytics"
                 svg={
@@ -391,11 +391,11 @@ export default function Services() {
 
       {/* testimonials */}
       <div style={{ paddingTop: "50px" }}>
-        <h2 className="mt-12 text-4xl text-black text-center mb-12 font-semibold">
+        <h2 className="pt-[100px] text-4xl text-black text-center mb-12 font-semibold">
           Hear What Our <span className="text-warning"> Customers</span> Have to
           Say!
         </h2>
-        <div className="pt-12 pb-12 grid grid-cols-8 gap-10">
+        <div className="pb-[100px] grid grid-cols-8 gap-10">
           <div className="col-start-2 col-span-6">
             <TestimonialCarousel />
           </div>

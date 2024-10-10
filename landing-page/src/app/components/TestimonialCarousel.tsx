@@ -27,18 +27,12 @@ export const TestimonialCarousel = () => {
           style={{ backfaceVisibility: "hidden" }}
         >
           <p className="mx-auto max-w-4xl text-xl italic text-neutral-700 dark:text-neutral-300">
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
-            error amet numquam iure provident voluptate esse quasi, voluptas
-            nostrum quisquam!"
+            &quot;Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Fugit, error amet numquam iure provident voluptate esse quasi,
+            voluptas nostrum quisquam!&quot;
           </p>
-          <div className="mb-6 mt-12 flex justify-center">
-            <img
-              src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp"
-              className="h-24 w-24 rounded-full shadow-lg dark:shadow-black/30"
-              alt="smaple image"
-            />
-          </div>
-          <p className="text-neutral-500 dark:text-neutral-300">
+
+          <p className="text-neutral-500 mt-4 dark:text-neutral-300">
             - Anna Morian
           </p>
         </div>
@@ -50,18 +44,13 @@ export const TestimonialCarousel = () => {
           style={{ backfaceVisibility: "hidden" }}
         >
           <p className="mx-auto max-w-4xl text-xl italic text-neutral-700 dark:text-neutral-300">
-            "Neque cupiditate assumenda in maiores repudiandae mollitia adipisci
-            maiores repudiandae mollitia consectetur adipisicing architecto elit
-            sed adipiscing elit."
+            &quot;Neque cupiditate assumenda in maiores repudiandae mollitia
+            adipisci maiores repudiandae mollitia consectetur adipisicing
+            architecto elit sed adipiscing elit.&quot;
           </p>
-          <div className="mb-6 mt-12 flex justify-center">
-            <img
-              src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(31).webp"
-              className="h-24 w-24 rounded-full shadow-lg dark:shadow-black/30"
-              alt="smaple image"
-            />
-          </div>
-          <p className="text-neutral-500 dark:text-neutral-300">- Teresa May</p>
+          <p className="text-neutral-500 mt-4 dark:text-neutral-300">
+            - Teresa May
+          </p>
         </div>
 
         {/* <!--Third Testimonial / Carousel item--> */}
@@ -71,18 +60,18 @@ export const TestimonialCarousel = () => {
           style={{ backfaceVisibility: "hidden" }}
         >
           <p className="mx-auto max-w-4xl text-xl italic text-neutral-700 dark:text-neutral-300">
-            "Duis aute irure dolor in reprehenderit in voluptate velit esse
+            &quot;Duis aute irure dolor in reprehenderit in voluptate velit esse
             cillum dolore eu fugiat nulla pariatur est laborum neque cupiditate
-            assumenda in maiores."
+            assumenda in maiores.&quot;
           </p>
-          <div className="mb-6 mt-12 flex justify-center">
+          {/* <div className="mb-6 mt-12 flex justify-center">
             <img
               src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp"
               className="h-24 w-24 rounded-full shadow-lg dark:shadow-black/30"
               alt="smaple image"
             />
-          </div>
-          <p className="text-neutral-500 dark:text-neutral-300">
+          </div> */}
+          <p className="mt-4 text-neutral-500 dark:text-neutral-300">
             - Kate Allise
           </p>
         </div>

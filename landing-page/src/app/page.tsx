@@ -161,13 +161,13 @@ const Home = () => {
         <h2 className="text-center text-black text-6xl font-semibold mt-12">
           Our <span className="text-warning">Technologies</span>
         </h2>
-        <footer className="block text-center px-[5%] xl:px-[30%] mt-2 text-neutral-600 text-xl dark:text-neutral-400">
+        <footer className="block text-center px-[5%] xl:px-[30%] mt-4 text-neutral-600 text-xl dark:text-neutral-400">
           With our technologies, you can transform your warehouse into a
           high-performing hub, ready to meet the dynamic demands of today’s
           marketplace.
         </footer>
 
-        <div className="grid grid-cols-6 mt-5 p-4 xl:p-12">
+        <div className="grid grid-cols-6 p-4 xl:pt-6 xl:p-12">
           <div className="xl:col-start-2 col-span-6 xl:col-span-4">
             {!isReducedMotion ? (
               <ScrollerList dataAnimated="true" />
@@ -187,7 +187,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Specializations */}
+      {/* Why Us? */}
       <div
         style={{
           clipPath: "polygon(0 0, 100% 10%, 100% 100%, 0 90%)",
@@ -204,7 +204,7 @@ const Home = () => {
         <footer className="block text-center mt-1 text-xl text-neutral-600 dark:text-neutral-400 font-bold">
           Contact us to know more of our strengths and why this is right for you
         </footer>
-        <Tabs className="p-4 md:p-12 md:ml-12 md:mr-12" />
+        <Tabs className="p-4 md:p-12 md:pt-4 md:ml-12 md:mr-12" />
       </div>
 
       {/* meet the team */}

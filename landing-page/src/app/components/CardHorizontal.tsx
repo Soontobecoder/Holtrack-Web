@@ -96,9 +96,9 @@ export const CardHorizontal: React.FC<CardHorizontal> = ({
                     style={{ cursor: "pointer" }}
                     className="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
                     data-twe-dropdown-item-ref
-                    onClick={() => onClick("action")}
+                    onClick={() => onClick("contact")}
                   >
-                    Action
+                    I'm interested in RFID Technologies
                   </a>
                 </li>
                 <li>
@@ -106,9 +106,19 @@ export const CardHorizontal: React.FC<CardHorizontal> = ({
                     style={{ cursor: "pointer" }}
                     className="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
                     data-twe-dropdown-item-ref
-                    onClick={() => onClick("another action")}
+                    onClick={() => onClick("pricing")}
                   >
-                    Another action
+                    I need prices
+                  </a>
+                </li>
+                <li>
+                  <a
+                    style={{ cursor: "pointer" }}
+                    className="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                    data-twe-dropdown-item-ref
+                    onClick={() => onClick("contact")}
+                  >
+                    I need technical support
                   </a>
                 </li>
                 <li>

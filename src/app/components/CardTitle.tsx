@@ -38,7 +38,7 @@ export const CardTitle: React.FC<CardTitle> = ({
           style={{
             clipPath: "circle(38%)",
           }}
-          className="rounded-t-lg h-48 mt-5 mb-5"
+          className="rounded-t-lg mx-auto h-48 mt-5 mb-5"
           src={image}
           alt=""
         />
@@ -49,9 +49,11 @@ export const CardTitle: React.FC<CardTitle> = ({
           className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"
         ></div>
       </div>
-      <div className="p-6 group-hover:text-white text-surface">
-        <h5 className="mb-2 text-xl font-medium leading-tight">{cardTitle}</h5>
-        <p className="mb-4 text-base">{cardBody}</p>
+      <div className="p-6 group-hover:text-white flex flex-col grow justify-between text-surface">
+        <h5 className="mb-2 text-md md:text-xl font-medium leading-tight">
+          {cardTitle}
+        </h5>
+        <p className="text-sm md:text-base">{cardBody}</p>
       </div>
     </div>
   );

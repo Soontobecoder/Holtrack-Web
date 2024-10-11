@@ -274,7 +274,7 @@ const Home = () => {
               alt=""
             />
             <figcaption className="text-xl text-center text-neutral-600 dark:text-neutral-400">
-              Brantley Nige(r)l
+              Brantley Nigel
             </figcaption>
           </figure>
         </div>

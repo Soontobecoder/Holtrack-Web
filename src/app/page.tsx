@@ -31,11 +31,11 @@ const Home = () => {
       <HomeHeader />
 
       {/* Centered cards */}
-      <div className="grid grid-cols-6 gap-10 mb-12">
+      <div className="grid grid-cols-6 gap-5 px-4 xl:px-0 xl:gap-10 mb-12">
         <div className="col-start-1 col-span-3 xl:col-start-2 xl:col-span-1 z-10">
           <CardTitle
             image="https://images.unsplash.com/photo-1563986768711-b3bde3dc821e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YnVkZ2V0JTIwZnJpZW5kbHl8ZW58MHx8MHx8fDA%3D"
-            cardBody="Our plans are designed to meet your personalized business needs while offering cost-effective solutions."
+            cardBody="Plans designed to meet your personalized business needs while offering cost-effective solutions."
             cardTitle={
               <>
                 Budget{" "}

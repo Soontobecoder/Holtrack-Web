@@ -34,7 +34,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a href="/about" className="hover:underline">
-                    Who are we
+                    What are we
                   </a>
                 </li>
               </ul>

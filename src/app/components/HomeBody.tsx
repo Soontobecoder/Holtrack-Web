@@ -12,15 +12,14 @@ export const HomeBody: React.FC<HeaderProps> = ({ className, style }) => {
       style={{
         clipPath: "polygon(100% 0, 100% 90%, 0 100%, 0 10%)",
         backgroundColor: "#00263A",
-        paddingBottom: "150px",
-        paddingTop: "150px",
       }}
+      className="pt-[220px] pb-[220px] xl:pb-[150px] xl:pt-[150px]"
     >
-      <h1 className="text-6xl text-center text-white">
+      <h1 className="text-2xl md:text-4xl xl:text-6xl text-center text-white">
         Securing and Automating <span className="text-warning">Warehouse </span>
         Management
       </h1>
-      <footer className="block pb-2 pt-2 px-[5%] xl:px-[30%] text-center font-light leading-relaxed mt-1 text-white text-base">
+      <footer className="block pb-2 pt-2 px-[5%] text-xs md:text-base xl:px-[30%] text-center font-light leading-relaxed mt-1 text-white text-base">
         With unique tags on each item, businesses can quickly scan and monitor
         stock levels, reducing manual errors and minimizing the risk of loss or
         theft. This streamlined approach not only boosts operational efficiency

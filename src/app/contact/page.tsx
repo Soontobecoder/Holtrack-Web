@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Partners } from "./components/Partners";
+// import { Partners } from "./components/Partners";
 
 export default function Contact() {
   useEffect(() => {
@@ -83,7 +83,7 @@ export default function Contact() {
                 className="font-semibold text-warning"
               >
                 {" "}
-                holtech1064@gmail.com
+                sales@holtrack.com
               </a>
             </p>
           </div>
@@ -283,8 +283,8 @@ export default function Contact() {
                   Your Message
                 </label>
               </div>
-              {/* <!--Subscribe newsletter checkbox--> */}
-              <div className="mb-6 flex">
+              {/* <!--Subscribe newsletter checkbox--> - IN DEVELOPMENT*/}
+              {/* <div className="mb-6 flex">
                 <input
                   className="relative float-left me-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-secondary-500 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] checked:border-primary checked:bg-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:-mt-px checked:after:ms-[0.25rem] checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-l-0 checked:after:border-t-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:-mt-px checked:focus:after:ms-[0.25rem] checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-l-0 checked:focus:after:border-t-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent rtl:float-right dark:border-neutral-400 dark:checked:border-primary dark:checked:bg-primary"
                   type="checkbox"
@@ -297,7 +297,7 @@ export default function Contact() {
                 >
                   Subscribe to our newsletter
                 </label>
-              </div>
+              </div> */}
 
               {/* <!--Submit button--> */}
               <button
@@ -317,30 +317,32 @@ export default function Contact() {
               {/* To get the src, just go to google maps, type in the address, click share, and select the embed a map tab option, then copy the html code (but just use the src link) */}
               <iframe
                 className="absolute top-0 left-0 rounded-xl w-full h-full"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2603.0904723695135!2d-122.98314342320333!3d49.27468287132028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486774efca04825%3A0x50e0b4b22d72252d!2s1064%20Holdom%20Ave%2C%20Burnaby%2C%20BC%20V5B%203V6!5e0!3m2!1sen!2sca!4v1726778156469!5m2!1sen!2sca"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.9879806740005!2d106.70296117576353!3d-6.132316560125041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a02a387cda21f%3A0x39707ea39295245d!2sApartemen%20Palm%20Mansion!5e0!3m2!1sid!2sca!4v1729405368474!5m2!1sid!2sca"
                 style={{ border: "0" }}
                 allowFullScreen={true}
                 aria-hidden="false"
                 tabIndex={0}
-              ></iframe>
+              />
             </div>
             <div className="pt-[40px] text-black text-2xl font-semibold">
               Main Office
             </div>
-            <div className="pt-[30px] text-black text-base ">
-              1064 Holdom Ave, Burnaby, BC
+            <div className="pt-[30px] text-black text-base text-justify ">
+              Jl. Taman Surya 5 Raya, Apartemen Palm Mansion Tower M. 15AB,
+              Pegadungan Kalideres, RT.2/RW.3, Pegadungan, Kec. Kalideres, Kota
+              Jakarta Barat, Daerah Khusus Ibukota Jakarta 11830
             </div>
             <div className="pt-[30px] text-black text-base ">
               <span className="font-semibold">Phone</span> (778)-997-9115
             </div>
             <div className="text-black text-base ">
-              <span className="font-semibold">Email</span> holtech1064@gmail.com
+              <span className="font-semibold">Email</span> sales@holtrack.com
             </div>
           </div>
         </div>
       </div>
-      {/* Partners bar */}
-      <Partners />
+      {/* Partners bar - IN DEVELOPMENT */}
+      {/* <Partners /> */}
     </div>
   );
 }

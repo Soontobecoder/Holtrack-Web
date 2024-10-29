@@ -39,7 +39,7 @@ export const Card: React.FC<CardProps> = ({
           {cardTitle}
         </h3>
       </div>
-      <p className="text-slate-500 group-hover:text-white text-sm">
+      <p className="text-slate-500 group-hover:text-white text-xs md:text-sm">
         {cardBody}
       </p>
       <Link href={link}>

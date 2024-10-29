@@ -1,6 +1,6 @@
 "use client";
 import { CSSProperties } from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 interface Props {
   className?: string;
@@ -19,7 +19,7 @@ export const RoICalculator: React.FC<Props> = ({ className, style }) => {
   const [roiData, setRoiData] = useState({
     inventoryTurns: 1,
     itemsInStock: 1000,
-    AvgValue: 100,
+    AvgValue: 850000,
   });
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -95,14 +95,14 @@ export const RoICalculator: React.FC<Props> = ({ className, style }) => {
                 <cite>one year</cite>
               </footer>
             </div>
-            <div className="w-1/5 self-end">
+            <div className="w-1/3 self-center">
               {" "}
               <div className="relative" data-twe-input-wrapper-init>
                 <input
                   type="number"
                   min="1"
                   name="inventoryTurns"
-                  className="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0rem] text-xl leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
+                  className="peer text-end block min-h-[auto] w-full rounded border-0 bg-transparent py-[0rem] text-xl leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
                   id="inventoryTurns number"
                   max="6"
                   value={roiData.inventoryTurns}
@@ -134,15 +134,16 @@ export const RoICalculator: React.FC<Props> = ({ className, style }) => {
                 How many Assets or inventory you would like to <cite>tag</cite>
               </footer>
             </div>
-            <div className="w-1/5 self-end">
+            <div className="w-1/3 self-center">
               {" "}
               <div className="relative" data-twe-input-wrapper-init>
                 <input
                   type="number"
                   name="itemsInStock"
                   min="100"
-                  className="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0rem] text-xl leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
+                  className="peer block text-end min-h-[auto] w-full rounded border-0 bg-transparent py-[0rem] text-xl leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
                   id="inventoryTurns number"
+                  step={100}
                   max="10000"
                   value={roiData.itemsInStock}
                   onChange={handleChange}
@@ -173,16 +174,17 @@ export const RoICalculator: React.FC<Props> = ({ className, style }) => {
                 Average price of your <cite>assets</cite>
               </footer>
             </div>
-            <div className="w-1/5 self-end">
+            <div className="w-1/3 self-center">
               {" "}
               <div className="relative" data-twe-input-wrapper-init>
                 <input
                   type="number"
                   name="AvgValue"
-                  className="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0rem] text-xl leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
+                  className="peer text-end block min-h-[auto] w-full rounded border-0 bg-transparent py-[0rem] text-xl leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
                   id="AvgValue number"
-                  min="10"
-                  max="1000"
+                  step={1000}
+                  min="850000"
+                  max="2000000"
                   value={roiData.AvgValue}
                   onChange={handleChange}
                 />
@@ -195,8 +197,8 @@ export const RoICalculator: React.FC<Props> = ({ className, style }) => {
             name="AvgValue"
             value={roiData.AvgValue}
             onChange={handleChange}
-            min="10"
-            max="1000"
+            min="850000"
+            max="2000000"
             id="customRange2"
           />
         </div>
@@ -211,10 +213,10 @@ export const RoICalculator: React.FC<Props> = ({ className, style }) => {
               Average costs for all the RFID equipment <cite>needed</cite>
             </footer>
           </div>
-          <div className="w-1/5 self-end">
+          <div className="w-1/3 self-center text-end">
             {" "}
             <div className="relative" data-twe-input-wrapper-init>
-              <p className="text-xl">$10,000</p>
+              <p className="text-lg">Rp 233,990,500</p>
             </div>
           </div>
         </div>
@@ -230,10 +232,10 @@ export const RoICalculator: React.FC<Props> = ({ className, style }) => {
               <cite>inventory</cite>
             </footer>
           </div>
-          <div className="w-1/5 self-end">
+          <div className="w-1/3 self-center text-end">
             {" "}
             <div className="relative" data-twe-input-wrapper-init>
-              <p className="text-xl">${revIncrease.toLocaleString()}</p>
+              <p className="text-lg">Rp {revIncrease.toLocaleString()}</p>
             </div>
           </div>
         </div>
@@ -249,10 +251,10 @@ export const RoICalculator: React.FC<Props> = ({ className, style }) => {
               <cite>system</cite>
             </footer>
           </div>
-          <div className="w-1/5 self-end">
+          <div className="w-1/3 self-center text-end">
             {" "}
             <div className="relative" data-twe-input-wrapper-init>
-              <p className="text-xl">${lossRed.toLocaleString()}</p>
+              <p className="text-lg">Rp {lossRed.toLocaleString()}</p>
             </div>
           </div>
         </div>
@@ -260,7 +262,7 @@ export const RoICalculator: React.FC<Props> = ({ className, style }) => {
       <div className="block rounded-lg bg-white mb-12 text-surface shadow-secondary-1 mt-5 mx-5 xl:m-[100px] xl:ml-[0px] order-1 xl:order-1 xl:pl-[0px] xl:w-1/3 text-black h-full">
         <div className="p-6">
           <div className="text-warning text-4xl text-center font-semibold">
-            $ {handleCalculation().toLocaleString()}
+            Rp {handleCalculation().toLocaleString()}.00
           </div>
           <div className="text-center font-semibold text-xl mt-1">
             Net gain adding RFID inventory
@@ -296,7 +298,7 @@ export const RoICalculator: React.FC<Props> = ({ className, style }) => {
                     required
                     id="input-group-1"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="name@flowbite.com"
+                    placeholder="name@gmail.com"
                   />
                 </div>
               </div>
@@ -311,8 +313,8 @@ export const RoICalculator: React.FC<Props> = ({ className, style }) => {
                   <input
                     type="text"
                     id="website-admin"
+                    placeholder="Budi"
                     className="rounded-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="elonmusk"
                   />
                 </div>
                 <div>
@@ -322,8 +324,8 @@ export const RoICalculator: React.FC<Props> = ({ className, style }) => {
                   <input
                     type="text"
                     id="website-admin"
+                    placeholder="Setiawan"
                     className="rounded-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="elonmusk"
                   />
                 </div>
               </div>
@@ -355,8 +357,8 @@ export const RoICalculator: React.FC<Props> = ({ className, style }) => {
                   <input
                     type="text"
                     id="input-group-1"
+                    placeholder="Holtrack"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="name@flowbite.com"
                   />
                 </div>
               </div>

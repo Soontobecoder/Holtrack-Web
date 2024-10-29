@@ -219,12 +219,12 @@ export default function ServiceDetails({
               <h2 className="mt-5 text-2xl text-black mb-4 font-semibold">
                 Get Started Today
               </h2>
-              <p className="text-black text-justify">
+              <p className="text-black text-start">
                 Ready to transform your operations with RFID technology? Contact
                 us to learn how Holtrack can deliver the solutions you need to
                 succeed.
               </p>
-              <p className="text-black text-justify mt-4">
+              <p className="text-black text-start mt-4">
                 Simply call +62 (822)-5888-8701, email{" "}
                 <span style={{ textDecoration: "underline", color: "#E4A11B" }}>
                   {" "}

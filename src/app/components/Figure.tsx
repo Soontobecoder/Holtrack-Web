@@ -20,7 +20,7 @@ export const Figure: React.FC<FigureProps> = ({
     >
       <img
         src={image}
-        className="h-auto max-w-sm rounded-lg shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30"
+        className="h-auto max-w-xs md:max-w-sm rounded-lg shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30"
         alt=""
       />
       <figcaption className="text-sm text-neutral-300 dark:text-neutral-400">

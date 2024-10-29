@@ -337,7 +337,7 @@ export default function Services() {
             <div className="mt-5 xl:mt-0 row-start-2 col-start-4 col-span-2">
               <CardImages
                 link="/RFIDTag"
-                title="Fragile Tags"
+                title="RFID Tags"
                 body="RFID technology helps companies improve productivity, increase visibility, and reduce operating costs."
                 image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvk9Mzw_0D5NWdh7kyeDgxmkAlT0FmJLGg6g&s"
               />
@@ -432,12 +432,12 @@ export default function Services() {
               <h2 className="mt-5 text-2xl text-black mb-4 font-semibold">
                 Get Started Today
               </h2>
-              <p className="text-black text-justify">
+              <p className="text-black text-start">
                 Ready to transform your operations with RFID technology? Contact
                 us to learn how Holtrack can deliver the solutions you need to
                 succeed.
               </p>
-              <p className="text-black text-justify mt-4">
+              <p className="text-black text-start mt-4">
                 Simply call +62 (822)-5888-8701, email{" "}
                 <span style={{ textDecoration: "underline", color: "#E4A11B" }}>
                   {" "}

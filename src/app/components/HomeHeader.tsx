@@ -8,14 +8,17 @@ interface HeaderProps {
 
 export const HomeHeader: React.FC<HeaderProps> = ({ className, style }) => {
   const [padding, setPadding] = useState("200px");
+  const [paddingTop, setPaddingTop] = useState("200px");
   const [paddingBottom, setPaddingBottom] = useState("0px");
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 1280) {
         // 1280px is the default `xl` breakpoint in Tailwind CSS
-        setPadding("80px");
+        setPadding("40px");
+        setPaddingTop("80px");
         setPaddingBottom("130px");
       } else {
+        setPaddingTop("200px");
         setPadding("200px");
         setPaddingBottom("200px");
       }
@@ -35,14 +38,15 @@ export const HomeHeader: React.FC<HeaderProps> = ({ className, style }) => {
       <div
         style={{
           padding,
+          paddingTop,
           paddingBottom,
         }}
         className="bg-black/60 xl:grid grid-cols-6 gap-5"
       >
         <div className="col-span-6 xl:col-span-3">
-          <h1 className="text-5xl font-medium leading-tight">
-            All in <span className="text-warning">One</span> Solutions for Easy
-            Warehousing
+          <h1 className="text-3xl sm:text-5xl font-medium leading-tight">
+            All in <span className="text-warning">One</span> Solutions for{" "}
+            <span className="text-warning">Easy Warehousing</span>
           </h1>
         </div>
         <div className="row-start-2 col-span-6 xl:mt-0 mt-4 xl:col-span-3">

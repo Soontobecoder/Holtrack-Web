@@ -9,10 +9,10 @@
     @apply bg-white;
     scroll-behavior: smooth;
   }
-  html.dark {
+  /* html.dark {
     @apply text-neutral-50;
     @apply bg-body-dark;
-  }
+  } */
 }
 
 :root {

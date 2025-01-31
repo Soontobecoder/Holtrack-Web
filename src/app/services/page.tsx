@@ -34,10 +34,6 @@ export default function Services() {
             Our <span className="text-warning">Services</span>
           </>
         }
-        Body="Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book."
       />
 
       <CardHorizontal
@@ -108,8 +104,13 @@ export default function Services() {
             <span className="text-warning"> Automating</span> Warehouse
             Management
           </h1>
-          <footer className="block pb-10 text-center font-light leading-relaxed mt-1 text-white text-xl">
-            Someone famous in <cite>Source Title</cite>
+          <footer className="block pb-2 pt-2 px-[5%] text-xs md:text-base xl:px-[30%] text-center font-light leading-relaxed mt-1 text-white">
+            With unique tags on each item, businesses can quickly scan and
+            monitor stock levels, reducing manual errors and minimizing the risk
+            of loss or theft. This streamlined approach not only boosts
+            operational efficiency but also ensures greater accuracy in order
+            fulfillment, allowing companies to respond swiftly to market
+            demands.
           </footer>
           <div className="mt-10 grid grid-cols-8 gap-4">
             <div className="col-start-2 md:col-start-2 col-span-6 md:col-span-2">
@@ -299,57 +300,47 @@ export default function Services() {
             Learn More of Our <span className="text-warning">Technologies</span>
           </h1>
           <footer className="block pb-10 text-center font-light leading-relaxed mt-1 text-xl">
-            Someone famous in <cite>Source Title</cite>
+            our cutting-edge <cite>Hardwares</cite>
           </footer>
-          <div className="mx-5 xl:mx-0 xl:grid xl:grid-cols-8 gap-4">
-            <div className="col-start-2 col-span-2">
-              <CardImages
-                link="/handheld"
-                title="Handheld Scanner"
-                body="RFID technology helps companies improve productivity, increase visibility, and reduce operating costs."
-                image="https://www.zebra.com/content/dam/zebra_dam/global/zcom-web-production/web-production-photography/product-cards/series/mc3300rfid-series-3x2-3600.jpg.imgo.jpg"
-              />
-            </div>
-            <div className="mt-5 xl:mt-0 col-start-4 col-span-2">
-              <CardImages
-                link=""
-                title="Gateway"
-                body="RFID technology helps companies improve productivity, increase visibility, and reduce operating costs."
-                image="https://www.idsolutionsindia.com/wp-content/uploads/2021/01/uhf-gate-reader-01.jpg"
-              />
-            </div>
-            <div className="mt-5 xl:mt-0 col-start-6 col-span-2">
-              <CardImages
-                link=""
-                title="Fixed scanner"
-                body="RFID technology helps companies improve productivity, increase visibility, and reduce operating costs."
-                image="https://www.jtspeedwork.com/uploadfile/202402/22/fd8a377e08e3854a427096c8eadce725_medium.jpg"
-              />
-            </div>
-            <div className="mt-5 xl:mt-0 row-start-2 col-start-2 col-span-2">
-              <CardImages
-                link=""
-                title="Antenna"
-                body="RFID technology helps companies improve productivity, increase visibility, and reduce operating costs."
-                image="https://m.media-amazon.com/images/I/61t-wejAYHL._AC_UF894,1000_QL80_.jpg"
-              />
-            </div>
-            <div className="mt-5 xl:mt-0 row-start-2 col-start-4 col-span-2">
-              <CardImages
-                link="/RFIDTag"
-                title="RFID Tags"
-                body="RFID technology helps companies improve productivity, increase visibility, and reduce operating costs."
-                image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvk9Mzw_0D5NWdh7kyeDgxmkAlT0FmJLGg6g&s"
-              />
-            </div>
-            <div className="mt-5 xl:mt-0 row-start-2 col-start-6 col-span-2">
-              <CardImages
-                link=""
-                title="RFID Printer"
-                body="RFID technology helps companies improve productivity, increase visibility, and reduce operating costs."
-                image="https://www.jtspeedwork.com/uploadfile/202403/29/995ddfd6b45d4c7d3864a942398c29ca_thumb.jpg"
-              />
-            </div>
+          <div className="flex justify-center px-[100px] flex-wrap gap-4">
+            <CardImages
+              link="/handheld"
+              title="Handheld Scanner"
+              body="RFID technology helps companies improve productivity, increase visibility, and reduce operating costs."
+              image="https://www.zebra.com/content/dam/zebra_dam/global/zcom-web-production/web-production-photography/product-cards/series/mc3300rfid-series-3x2-3600.jpg.imgo.jpg"
+            />
+
+            <CardImages
+              link=""
+              title="Gateway"
+              body="RFID technology helps companies improve productivity, increase visibility, and reduce operating costs."
+              image="https://www.idsolutionsindia.com/wp-content/uploads/2021/01/uhf-gate-reader-01.jpg"
+            />
+            <CardImages
+              link=""
+              title="Fixed scanner"
+              body="RFID technology helps companies improve productivity, increase visibility, and reduce operating costs."
+              image="https://www.jtspeedwork.com/uploadfile/202402/22/fd8a377e08e3854a427096c8eadce725_medium.jpg"
+            />
+
+            <CardImages
+              link=""
+              title="Antenna"
+              body="RFID technology helps companies improve productivity, increase visibility, and reduce operating costs."
+              image="https://m.media-amazon.com/images/I/61t-wejAYHL._AC_UF894,1000_QL80_.jpg"
+            />
+            <CardImages
+              link="/RFIDTag"
+              title="RFID Tags"
+              body="RFID technology helps companies improve productivity, increase visibility, and reduce operating costs."
+              image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvk9Mzw_0D5NWdh7kyeDgxmkAlT0FmJLGg6g&s"
+            />
+            <CardImages
+              link=""
+              title="RFID Printer"
+              body="RFID technology helps companies improve productivity, increase visibility, and reduce operating costs."
+              image="https://www.jtspeedwork.com/uploadfile/202403/29/995ddfd6b45d4c7d3864a942398c29ca_thumb.jpg"
+            />
           </div>
         </div>
       </div>
@@ -365,9 +356,6 @@ export default function Services() {
         <h2 className="text-center text-white text-6xl font-semibold">
           Our Technologies
         </h2>
-        <footer className="block text-center mt-1 text-neutral-200 dark:text-neutral-400">
-          - Someone famous in <cite>Source Title</cite>
-        </footer>
 
         <div className="grid grid-cols-6 mt-12 p-4 xl:p-12">
           <div className="xl:col-start-2 col-span-6 xl:col-span-4">
@@ -391,10 +379,16 @@ export default function Services() {
 
       {/* testimonials */}
       <div style={{ paddingTop: "50px" }}>
-        <h2 className="pt-[100px] text-4xl text-black text-center mb-12 font-semibold">
-          Hear What Our <span className="text-warning"> Customers</span> Have to
-          Say!
+        <h2 className="pt-[100px] xl:pt-[150px] text-4xl text-black text-center mb-12 font-semibold">
+          Our <span className="text-warning"> Milestones </span>
         </h2>
+        <footer className="block px-[50px] md:px-[500px] text-center text-xl mb-8 text-neutral-600">
+          Discover the diverse and impactful collaborations we’ve forged across
+          industries. At Holtech, we take pride in supporting and nurturing
+          relationships with a wide range of partners. Each partnership is
+          uniquely tailored to deliver exceptional value, fostering innovation
+          and growth for all stakeholders.
+        </footer>
         <div className="pb-[100px] grid grid-cols-8 gap-10">
           <div className="col-start-2 col-span-6">
             <TestimonialCarousel />
@@ -441,7 +435,7 @@ export default function Services() {
                 Simply call +62 (822)-5888-8701, email{" "}
                 <span style={{ textDecoration: "underline", color: "#E4A11B" }}>
                   {" "}
-                  holtech1064@gmail.com
+                  sales@holtrack.com
                 </span>
                 , or fill out our form! We’re here to help.
               </p>

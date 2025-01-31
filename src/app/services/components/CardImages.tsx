@@ -10,7 +10,7 @@ interface Props {
 export const CardImages: React.FC<Props> = ({ image, body, title, link }) => {
   return (
     <Link href={link}>
-      <div className="flex bg-primary-900 flex-row block h-full w-full transition-all duration-300 hover:shadow-5-strong rounded-xl text-white shadow-secondary-1 dark:bg-surface-dark dark:text-white">
+      <div className="flex bg-primary-900 flex-row block h-full w-[450px] transition-all duration-300 hover:shadow-5-strong rounded-xl text-white shadow-secondary-1 dark:bg-surface-dark dark:text-white">
         <img
           className="w-full mt-6 ml-6 rounded-xl h-32 w-48 "
           src={image}

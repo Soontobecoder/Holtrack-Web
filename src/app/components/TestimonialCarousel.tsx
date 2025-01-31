@@ -1,6 +1,8 @@
 "use client";
 import { useEffect } from "react";
 import { CSSProperties } from "react";
+import Akebono from "../assets/Akebono.png";
+import Image from "next/image";
 
 export const TestimonialCarousel = () => {
   useEffect(() => {
@@ -21,12 +23,12 @@ export const TestimonialCarousel = () => {
       <div className="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
         {/* <!--First Testimonial / Carousel item--> */}
         <div
-          className="relative float-left -mr-[100%] hidden w-full text-center transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+          className="relative float-left hidden w-full text-center transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
           data-twe-carousel-active
           data-twe-carousel-item
           style={{ backfaceVisibility: "hidden" }}
         >
-          <p className="mx-auto max-w-4xl text-xl italic text-neutral-700 dark:text-neutral-300">
+          {/* <p className="mx-auto max-w-4xl text-xl italic text-neutral-700 dark:text-neutral-300">
             &quot;Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Fugit, error amet numquam iure provident voluptate esse quasi,
             voluptas nostrum quisquam!&quot;
@@ -34,7 +36,14 @@ export const TestimonialCarousel = () => {
 
           <p className="text-neutral-500 mt-4 dark:text-neutral-300">
             - Anna Morian
-          </p>
+          </p> */}
+          <div className="mx-12 flex flex-wrap items-center justify-center gap-12">
+            <Image
+              style={{ width: "300px", height: "120px" }}
+              alt="akebono member of astra"
+              src={Akebono}
+            />
+          </div>
         </div>
 
         {/* <!--Second Testimonial / Carousel item--> */}
@@ -43,14 +52,13 @@ export const TestimonialCarousel = () => {
           data-twe-carousel-item
           style={{ backfaceVisibility: "hidden" }}
         >
-          <p className="mx-auto max-w-4xl text-xl italic text-neutral-700 dark:text-neutral-300">
-            &quot;Neque cupiditate assumenda in maiores repudiandae mollitia
-            adipisci maiores repudiandae mollitia consectetur adipisicing
-            architecto elit sed adipiscing elit.&quot;
-          </p>
-          <p className="text-neutral-500 mt-4 dark:text-neutral-300">
-            - Teresa May
-          </p>
+          <div className="mx-12 flex flex-wrap items-center justify-center gap-12">
+            <Image
+              style={{ width: "300px", height: "120px" }}
+              alt="akebono member of astra"
+              src={Akebono}
+            />
+          </div>
         </div>
 
         {/* <!--Third Testimonial / Carousel item--> */}
@@ -59,24 +67,15 @@ export const TestimonialCarousel = () => {
           data-twe-carousel-item
           style={{ backfaceVisibility: "hidden" }}
         >
-          <p className="mx-auto max-w-4xl text-xl italic text-neutral-700 dark:text-neutral-300">
-            &quot;Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur est laborum neque cupiditate
-            assumenda in maiores.&quot;
-          </p>
-          {/* <div className="mb-6 mt-12 flex justify-center">
-            <img
-              src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp"
-              className="h-24 w-24 rounded-full shadow-lg dark:shadow-black/30"
-              alt="smaple image"
+          <div className="mx-12 flex flex-wrap items-center justify-center gap-12">
+            <Image
+              style={{ width: "300px", height: "120px" }}
+              alt="akebono member of astra"
+              src={Akebono}
             />
-          </div> */}
-          <p className="mt-4 text-neutral-500 dark:text-neutral-300">
-            - Kate Allise
-          </p>
+          </div>
         </div>
       </div>
-
       {/* <!--Carousel Controls - prev item--> */}
       <button
         className="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-black opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-black hover:no-underline hover:opacity-90 hover:outline-none focus:text-black focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none dark:text-white dark:opacity-50 dark:hover:text-white dark:focus:text-white"

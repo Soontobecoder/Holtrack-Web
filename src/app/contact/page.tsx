@@ -77,9 +77,9 @@ export default function Contact() {
               request form or call the number below
             </p>
             <p className="xl:text-lg pt-[40px] text-black ">
-              <span className="font-bold">+62 (877)-7674-9115 </span> |
+              <span className="font-bold">+1 (877)-7674-9115 </span> |
               <a
-                href="mailto: holtech1064@gmail.com"
+                href="mailto: sales@holtrack.com"
                 className="font-semibold text-warning"
               >
                 {" "}
@@ -106,7 +106,7 @@ export default function Contact() {
                     placeholder="First name"
                   />
                   <label className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary">
-                    First name
+                    First name <span className="text-danger">*</span>
                   </label>
                 </div>
 
@@ -124,7 +124,7 @@ export default function Contact() {
                     placeholder="Last name"
                   />
                   <label className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary">
-                    Last name
+                    Last name <span className="text-danger">*</span>
                   </label>
                 </div>
               </div>
@@ -143,7 +143,7 @@ export default function Contact() {
                     placeholder="Email address"
                   />
                   <label className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary">
-                    Email address
+                    Email address <span className="text-danger">*</span>
                   </label>
                 </div>
                 <div className="relative mb-6" data-twe-input-wrapper-init>
@@ -159,7 +159,7 @@ export default function Contact() {
                     placeholder="Last name"
                   />
                   <label className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary">
-                    Phone Number
+                    Phone Number <span className="text-danger">*</span>
                   </label>
                 </div>
               </div>
@@ -228,7 +228,7 @@ export default function Contact() {
                     placeholder="First name"
                   />
                   <label className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary">
-                    City
+                    City <span className="text-danger">*</span>
                   </label>
                 </div>
 
@@ -246,7 +246,7 @@ export default function Contact() {
                     placeholder="Last name"
                   />
                   <label className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary">
-                    Region
+                    Region <span className="text-danger">*</span>
                   </label>
                 </div>
 
@@ -264,7 +264,7 @@ export default function Contact() {
                     placeholder="Last name"
                   />
                   <label className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary">
-                    Postal Code
+                    Postal Code <span className="text-danger">*</span>
                   </label>
                 </div>
               </div>
@@ -272,15 +272,16 @@ export default function Contact() {
               <div className="relative mb-6" data-twe-input-wrapper-init>
                 <textarea
                   className="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
-                  id="exampleFormControlTextarea13"
+                  id="message"
                   rows={3}
+                  required
                   placeholder="Message"
                 ></textarea>
                 <label
-                  htmlFor="exampleFormControlTextarea13"
+                  htmlFor="message"
                   className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary"
                 >
-                  Your Message
+                  Your Message <span className="text-danger">*</span>
                 </label>
               </div>
               {/* <!--Subscribe newsletter checkbox--> - IN DEVELOPMENT*/}

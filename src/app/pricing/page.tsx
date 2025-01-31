@@ -29,7 +29,6 @@ export default function Pricing() {
             Our <span className="text-warning">Prices</span>
           </>
         }
-        Body="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
       />
       <CardHorizontal
         cardTitle="Need help?"
@@ -49,41 +48,35 @@ export default function Pricing() {
         </h2>
       </div>
       <div className="flex flex-col items-center xl:items-start xl:flex-row justify-center gap-6 pb-12">
-        <div>
-          <PricingCard
-            title="Hardware Only"
-            features={["Access to hardware catalog", "Feature explanation"]}
-            nonFeatures={["Integration help", "Software integration"]}
-            onTitleClick={handleSelect}
-          />
-        </div>
-        <div>
-          <PricingCard
-            title="Basic Plan"
-            features={[
-              "RFID Tags",
-              "Handheld Scanner",
-              "Software + Integration help",
-              "Antennas + Reader (customizable)",
-            ]}
-            nonFeatures={[
-              "API Access",
-              "Complete documentation",
-              "24×7 phone & email support",
-            ]}
-            onTitleClick={handleSelect}
-          />
-        </div>
-        <div>
-          <PricingCard
-            title="Personalized Plan"
-            features={[
-              "Contact us to know more about your personalized business needs regarding inventory management",
-            ]}
-            nonFeatures={[]}
-            onTitleClick={handleSelect}
-          />
-        </div>
+        <PricingCard
+          title="Personalized Plan"
+          features={[
+            "Contact us to know more about your personalized business needs regarding inventory management",
+          ]}
+          nonFeatures={[]}
+          onTitleClick={handleSelect}
+        />
+        <PricingCard
+          title="Hardware Only"
+          features={["Access to hardware catalog", "Feature explanation"]}
+          nonFeatures={["Integration help", "Software integration"]}
+          onTitleClick={handleSelect}
+        />
+        <PricingCard
+          title="Basic Plan"
+          features={[
+            "RFID Tags",
+            "Handheld Scanner",
+            "Software + Integration help",
+            "Antennas + Reader (customizable)",
+          ]}
+          nonFeatures={[
+            "API Access",
+            "Complete documentation",
+            "24×7 phone & email support",
+          ]}
+          onTitleClick={handleSelect}
+        />
       </div>
 
       {/* ROI Calculator */}
@@ -122,10 +115,17 @@ export default function Pricing() {
         </div>
       </div>
 
-      <h2 className="mt-12 text-4xl text-black text-center mb-12 font-semibold">
-        Hear what our customers have to say!
+      <h2 className="pt-[100px] xl:pt-[150px] text-4xl text-black text-center mb-12 font-semibold">
+        Our <span className="text-warning"> Milestones </span>
       </h2>
-      <div className="pt-[150px] pb-[150px] grid grid-cols-8 gap-10">
+      <footer className="block px-[50px] md:px-[500px] text-center text-xl mb-8 text-neutral-600">
+        Discover the diverse and impactful collaborations we’ve forged across
+        industries. At Holtech, we take pride in supporting and nurturing
+        relationships with a wide range of partners. Each partnership is
+        uniquely tailored to deliver exceptional value, fostering innovation and
+        growth for all stakeholders.
+      </footer>
+      <div className="pb-[150px] grid grid-cols-8 gap-10">
         <div className="col-start-2 col-span-6">
           <TestimonialCarousel />
         </div>

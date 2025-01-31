@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useEffect } from "react";
 
 export const Tabs = () => {
@@ -19,7 +20,7 @@ export const Tabs = () => {
         <li role="presentation" className="flex-grow">
           <a
             href="#tabs-asset-tracking"
-            className="flex justify-center xl:justify-start my-1 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[twe-nav-active]:text-warning data-[twe-nav-active]:bg-white data-[twe-nav-active]:rounded-lg dark:text-white/50 dark:hover:bg-neutral-700/60 dark:data-[twe-nav-active]:text-primary"
+            className="flex xl:justify-start my-1 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[twe-nav-active]:text-warning data-[twe-nav-active]:bg-white data-[twe-nav-active]:rounded-lg dark:text-white/50 dark:hover:bg-neutral-700/60 dark:data-[twe-nav-active]:text-primary"
             data-twe-toggle="pill"
             data-twe-target="#tabs-asset-tracking"
             data-twe-nav-active
@@ -57,7 +58,7 @@ export const Tabs = () => {
         <li role="presentation" className="flex-grow">
           <a
             href="#tabs-warehouse-integration"
-            className="flex justify-center xl:justify-start my-1 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[twe-nav-active]:text-warning data-[twe-nav-active]:bg-white data-[twe-nav-active]:rounded-lg dark:text-white/50 dark:hover:bg-neutral-700/60 dark:data-[twe-nav-active]:text-primary"
+            className="flex xl:justify-start my-1 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[twe-nav-active]:text-warning data-[twe-nav-active]:bg-white data-[twe-nav-active]:rounded-lg dark:text-white/50 dark:hover:bg-neutral-700/60 dark:data-[twe-nav-active]:text-primary"
             data-twe-toggle="pill"
             data-twe-target="#tabs-warehouse-integration"
             role="tab"
@@ -91,7 +92,7 @@ export const Tabs = () => {
         <li role="presentation" className="flex-grow">
           <a
             href="#tabs-inventory-opt"
-            className="flex justify-center xl:justify-start my-1 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[twe-nav-active]:text-warning data-[twe-nav-active]:bg-white data-[twe-nav-active]:rounded-lg dark:text-white/50 dark:hover:bg-neutral-700/60 dark:data-[twe-nav-active]:text-primary"
+            className="flex  xl:justify-start my-1 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[twe-nav-active]:text-warning data-[twe-nav-active]:bg-white data-[twe-nav-active]:rounded-lg dark:text-white/50 dark:hover:bg-neutral-700/60 dark:data-[twe-nav-active]:text-primary"
             data-twe-toggle="pill"
             data-twe-target="#tabs-inventory-opt"
             role="tab"
@@ -126,7 +127,7 @@ export const Tabs = () => {
         <li role="presentation" className="flex-grow">
           <a
             href="#tabs-custom-sol"
-            className="my-1 block border-x-0 flex justify-center xl:justify-start border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[twe-nav-active]:text-warning data-[twe-nav-active]:bg-white data-[twe-nav-active]:rounded-lg dark:text-white/50 dark:hover:bg-neutral-700/60 dark:data-[twe-nav-active]:text-primary"
+            className="my-1 block border-x-0 flex  xl:justify-start border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[twe-nav-active]:text-warning data-[twe-nav-active]:bg-white data-[twe-nav-active]:rounded-lg dark:text-white/50 dark:hover:bg-neutral-700/60 dark:data-[twe-nav-active]:text-primary"
             data-twe-toggle="pill"
             data-twe-target="#tabs-custom-sol"
             role="tab"
@@ -152,12 +153,12 @@ export const Tabs = () => {
         </li>
         <li role="presentation" className="flex-grow">
           <a
-            href="#tabs-messages03"
-            className="my-1 block border-x-0 flex justify-center xl:justify-start border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[twe-nav-active]:text-warning data-[twe-nav-active]:bg-white data-[twe-nav-active]:rounded-lg dark:text-white/50 dark:hover:bg-neutral-700/60 dark:data-[twe-nav-active]:text-primary"
+            href="#tabs-supply-chain"
+            className="my-1 block border-x-0 flex  xl:justify-start border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[twe-nav-active]:text-warning data-[twe-nav-active]:bg-white data-[twe-nav-active]:rounded-lg dark:text-white/50 dark:hover:bg-neutral-700/60 dark:data-[twe-nav-active]:text-primary"
             data-twe-toggle="pill"
-            data-twe-target="#tabs-messages03"
+            data-twe-target="#tabs-supply-chain"
             role="tab"
-            aria-controls="tabs-messages03"
+            aria-controls="tabs-supply-chain"
             aria-selected="false"
           >
             <svg
@@ -179,12 +180,12 @@ export const Tabs = () => {
         </li>
         <li role="presentation" className="flex-grow">
           <a
-            href="#tabs-contact03"
-            className="flex justify-center xl:justify-start my-1 block border-x-0 border-b-2 border-t-0 border-transparent bg-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent dark:text-neutral-600 data-[twe-nav-active]:text-warning data-[twe-nav-active]:bg-white data-[twe-nav-active]:rounded-lg dark:text-white/50 dark:hover:bg-neutral-700/60 dark:data-[twe-nav-active]:text-primary"
+            href="#tabs-analytics"
+            className="flex xl:justify-start my-1 block border-x-0 border-b-2 border-t-0 border-transparent bg-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent dark:text-neutral-600 data-[twe-nav-active]:text-warning data-[twe-nav-active]:bg-white data-[twe-nav-active]:rounded-lg dark:text-white/50 dark:hover:bg-neutral-700/60 dark:data-[twe-nav-active]:text-primary"
             data-twe-toggle="pill"
-            data-twe-target="#tabs-contact03"
+            data-twe-target="#tabs-analytics"
             role="tab"
-            aria-controls="tabs-contact03"
+            aria-controls="tabs-analytics"
             aria-selected="false"
           >
             <svg
@@ -229,9 +230,10 @@ export const Tabs = () => {
       {/* <!--Tabs content--> */}
       <div className="my-1 text-black bg-white p-8 rounded-lg xl:w-2/3">
         <div
-          className="hidden opacity-100 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
+          className="hidden flex p-[50px] opacity-100 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
           id="tabs-asset-tracking"
           role="tabpanel"
+          style={{ position: "relative" }}
           aria-labelledby="tabs-asset-tracking"
           data-twe-tab-active
         >
@@ -244,69 +246,231 @@ export const Tabs = () => {
             containers, our system ensures that you know the location, status,
             and usage history of your assets at all times.
           </p>
+          <Link href={"services/location_tracking"}>
+            <p
+              className="flex items-center text-warning cursor-pointer"
+              style={{ position: "absolute", bottom: "0", right: "0" }}
+            >
+              Read more{" "}
+              <svg
+                className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </p>
+          </Link>
         </div>
 
         <div
-          className="hidden opacity-100 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
+          className="hidden opacity-100 p-[50px] transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
           id="tabs-warehouse-integration"
           role="tabpanel"
+          style={{ position: "relative" }}
           aria-labelledby="tabs-warehouse-integration"
         >
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using &apos;Content here, content here&apos;,
-          making it look like readable English. Many desktop publishing packages
-          and web page editors now use Lorem Ipsum as their default model text,
-          and a search for &apos;lorem ipsum&apos; will uncover many web sites
-          still in their infancy. Various versions have evolved over the years,
-          sometimes by accident, sometimes on purpose (injected humour and the
-          like).
+          <h1 className="text-2xl text-warning mb-5">
+            Warehouse System Integration
+          </h1>
+          <p className="text-xl">
+            Seamlessly integrate RFID technology into your existing warehouse
+            management system. Our solution offers real-time inventory tracking,
+            automated data capture, and enhanced visibility across your entire
+            supply chain.
+          </p>
+          <Link href={"services/warehouse_integration"}>
+            <p
+              className="flex items-center text-warning cursor-pointer"
+              style={{ position: "absolute", bottom: "0", right: "0" }}
+            >
+              Read more{" "}
+              <svg
+                className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </p>
+          </Link>
         </div>
 
         <div
-          className="hidden opacity-100 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
+          className="hidden opacity-100 p-[50px] transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
           id="tabs-inventory-opt"
           role="tabpanel"
+          style={{ position: "relative" }}
           aria-labelledby="tabs-inventory-opt"
         >
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using &apos;Content here, content here&apos;,
-          making it look like readable English. Many desktop publishing packages
-          and web page editors now use Lorem Ipsum as their default model text,
-          and a search for &apos;lorem ipsum&apos; will uncover many web sites
-          still in their infancy. Various versions have evolved over the years,
-          sometimes by accident, sometimes on purpose (injected humour and the
-          like).
+          <h1 className="text-2xl text-warning mb-5">
+            Inventory Management Optimization
+          </h1>
+          <p className="text-xl">
+            Provides a robust inventory management solution that leverages RFID
+            for accurate, real-time tracking of stock levels. Monitor inventory
+            in multiple locations, track items from receipt to dispatch, and
+            ensure optimal stock levels to meet demand
+          </p>
+          <Link href={"services/inventory_optimization"}>
+            <p
+              className="flex items-center text-warning cursor-pointer"
+              style={{ position: "absolute", bottom: "0", right: "0" }}
+            >
+              Read more{" "}
+              <svg
+                className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </p>
+          </Link>
         </div>
 
         <div
-          className="hidden opacity-0 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
+          className="hidden opacity-0 p-[50px] transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
           id="tabs-custom-sol"
           role="tabpanel"
+          style={{ position: "relative" }}
           aria-labelledby="tabs-profile-tab03"
         >
-          Tab 2 content
+          <h1 className="text-2xl text-warning mb-5">Custom RFID Solutions</h1>
+          <p className="text-xl">
+            Every business has their challenges. Holtrack offers custom RFID
+            solutions tailored to your specific requirements. Whether you need a
+            bespoke integration or a specialized application, our team of
+            experts will work with you to develop a solution that fits your
+            business perfectly.
+          </p>
+          <Link href={"services/custom_solution"}>
+            <p
+              className="flex items-center text-warning cursor-pointer"
+              style={{ position: "absolute", bottom: "0", right: "0" }}
+            >
+              Read more{" "}
+              <svg
+                className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </p>
+          </Link>
         </div>
 
         <div
-          className="hidden opacity-0 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
-          id="tabs-messages03"
+          className="hidden opacity-0 p-[50px] transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
+          id="tabs-supply-chain"
           role="tabpanel"
-          aria-labelledby="tabs-profile-tab03"
+          style={{ position: "relative" }}
         >
-          Tab 3 content
+          <h1 className="text-2xl text-warning mb-5">
+            Supply Chain and Automation
+          </h1>
+          <p className="text-xl">
+            Enhance your supply chain with our RFID solutions, providing
+            end-to-end visibility and automation. From manufacturing to
+            distribution, Holtrack enables seamless tracking of goods, reducing
+            delays, and improving coordination across your supply chain.
+          </p>
+          <Link href={"services/supply_chain"}>
+            <p
+              className="flex items-center text-warning cursor-pointer"
+              style={{ position: "absolute", bottom: "0", right: "0" }}
+            >
+              Read more{" "}
+              <svg
+                className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </p>
+          </Link>
         </div>
 
         <div
-          className="hidden opacity-0 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
-          id="tabs-contact03"
+          className="hidden opacity-0 p-[50px] transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
+          id="tabs-analytics"
           role="tabpanel"
-          aria-labelledby="tabs-contact-tab03"
+          style={{ position: "relative" }}
         >
-          Tab 4 content
+          <h1 className="text-2xl text-warning mb-5">
+            Data Analytics and Reporting
+          </h1>
+          <p className="text-xl">
+            Transform data into actionable insights with our advanced analytics
+            and reporting tools. Holtrack’s RFID solutions collect and analyze
+            data in real-time, providing you with valuable insights to make
+            informed decisions and optimize your operations.
+          </p>
+          <Link href={"services/data_analytics"}>
+            <p
+              className="flex items-center text-warning cursor-pointer"
+              style={{ position: "absolute", bottom: "0", right: "0" }}
+            >
+              Read more{" "}
+              <svg
+                className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </p>
+          </Link>
         </div>
       </div>
     </div>

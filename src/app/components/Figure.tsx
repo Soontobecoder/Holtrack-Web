@@ -14,15 +14,14 @@ export const Figure: React.FC<FigureProps> = ({
   style,
 }) => {
   return (
-    <figure
-      style={{ ...style }}
-      className={"mb-4 inline-block max-w-sm " + className}
-    >
-      <img
-        src={image}
-        className="h-auto max-w-xs md:max-w-sm rounded-lg shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30"
-        alt=""
-      />
+    <figure style={{ ...style }} className={"mb-4 inline-block" + className}>
+      <div className="w-128 h-64 overflow-hidden rounded-lg">
+        <img
+          src={image}
+          className="w-full h-full object-cover object-center shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30"
+          alt=""
+        />
+      </div>
       <figcaption className="text-sm text-neutral-300 dark:text-neutral-400">
         {caption}
       </figcaption>

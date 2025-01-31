@@ -180,9 +180,16 @@ export default function ServiceDetails({
       </div>
 
       {/* Testimonials */}
-      <h2 className="mt-12 text-4xl text-black text-center mb-12 font-semibold">
-        Hear what our customers have to say!
+      <h2 className="pt-[100px] xl:pt-[150px] text-4xl text-black text-center mb-12 font-semibold">
+        Our <span className="text-warning"> Milestones </span>
       </h2>
+      <footer className="block px-[50px] md:px-[500px] text-center text-xl mb-8 text-neutral-600">
+        Discover the diverse and impactful collaborations we’ve forged across
+        industries. At Holtech, we take pride in supporting and nurturing
+        relationships with a wide range of partners. Each partnership is
+        uniquely tailored to deliver exceptional value, fostering innovation and
+        growth for all stakeholders.
+      </footer>
       <div className="pt-[100px] pb-[100px] xl:pt-[150px] xl:pb-[150px] grid grid-cols-8 gap-10">
         <div className="col-start-2 col-span-6">
           <TestimonialCarousel />
@@ -228,7 +235,7 @@ export default function ServiceDetails({
                 Simply call +62 (822)-5888-8701, email{" "}
                 <span style={{ textDecoration: "underline", color: "#E4A11B" }}>
                   {" "}
-                  holtech1064@gmail.com
+                  sales@holtrack.com
                 </span>
                 , or fill out our form! We’re here to help.
               </p>

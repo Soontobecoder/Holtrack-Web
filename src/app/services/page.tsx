@@ -87,14 +87,11 @@ export default function Services() {
       </div>
 
       <div
-        className="flex flex-col"
+        className="flex flex-col bg-[url('https://lucknowrecreation.com/wp-content/uploads/2018/04/Monthly-Website-Header-background-e1522931579825.jpg')] bg-cover bg-no-repeat"
         style={{
           paddingTop: "100px",
           paddingBottom: "100px",
           opacity: "0.8",
-          backgroundColor: "#a2a2a2",
-          backgroundImage:
-            "repeating-radial-gradient( circle at 0 0, transparent 0, #a2a2a2 100px ), repeating-linear-gradient( #162E3C55, #162E3C )",
           clipPath: "polygon(0 0, 100% 10%, 100% 100%, 0 90%)",
         }}
       >
@@ -147,7 +144,7 @@ export default function Services() {
             <div className="col-start-2 md:col-start-4 col-span-6 md:col-span-2">
               <Card
                 cardTitle="Warehouse System Integration"
-                cardBody="Seamlessly integrate RFID technology into your existing warehouse management system. Our solution offers real-time inventory tracking, automated data capture, and enhanced visibility across your entire supply chain."
+                cardBody="Holtrack specializes in providing RFID system integration and tailored solutions for different industries’ operations. Our team works closely with clients to understand their pain points before incorporating RFID technology into their operations."
                 link="/services/warehouse_integration"
                 svg={
                   <svg
@@ -203,8 +200,8 @@ export default function Services() {
             </div>
             <div className="col-start-2 col-span-6 md:col-span-2 md:col-start-2">
               <Card
-                cardTitle="Custom RFID Solutions"
-                cardBody="Every business has their challenges. Holtrack offers custom RFID solutions tailored to your specific requirements. Whether you need a bespoke integration or a specialized application, our team of experts will work with you to develop a solution that fits your business perfectly."
+                cardTitle="RFID Hardwares"
+                cardBody="Holtrack provides a variety of high-quality and up-to-date RFID hardware to support clients. Our hardware offerings include a wide range of unique RFID tags, fixed RFID readers, RFID handheld readers, RFID printers, and RFID antennas."
                 link="/service/custom_solutions"
                 svg={
                   <svg
@@ -306,39 +303,39 @@ export default function Services() {
             <CardImages
               link="/handheld"
               title="Handheld Scanner"
-              body="RFID technology helps companies improve productivity, increase visibility, and reduce operating costs."
+              body="handheld reader is viable when the reader needs to move around. Some handheld are capable of encoding data to your tags."
               image="https://www.zebra.com/content/dam/zebra_dam/global/zcom-web-production/web-production-photography/product-cards/series/mc3300rfid-series-3x2-3600.jpg.imgo.jpg"
             />
 
             <CardImages
               link=""
               title="Gateway"
-              body="RFID technology helps companies improve productivity, increase visibility, and reduce operating costs."
+              body="Stronger version of a fixed reader. Enabling tags to be read as it passes the gate"
               image="https://www.idsolutionsindia.com/wp-content/uploads/2021/01/uhf-gate-reader-01.jpg"
             />
             <CardImages
               link=""
               title="Fixed scanner"
-              body="RFID technology helps companies improve productivity, increase visibility, and reduce operating costs."
+              body="The readers are the middleman between tags and electronic devices. They emit a signal to retrieve data from tags. Having a fixed reader allows the area to constantly be monitored."
               image="https://www.jtspeedwork.com/uploadfile/202402/22/fd8a377e08e3854a427096c8eadce725_medium.jpg"
             />
 
             <CardImages
               link=""
               title="Antenna"
-              body="RFID technology helps companies improve productivity, increase visibility, and reduce operating costs."
+              body="The way the tags and readers communicate. Some readers may have built in antennas in them, but occasionally, a reader use extra antennas to extend its reach"
               image="https://m.media-amazon.com/images/I/61t-wejAYHL._AC_UF894,1000_QL80_.jpg"
             />
             <CardImages
               link="/RFIDTag"
               title="RFID Tags"
-              body="RFID technology helps companies improve productivity, increase visibility, and reduce operating costs."
+              body="Tags are placed on the inventory/asset and they can hold more data than barcodes. These data are read by RFID readers and antennas."
               image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvk9Mzw_0D5NWdh7kyeDgxmkAlT0FmJLGg6g&s"
             />
             <CardImages
               link=""
               title="RFID Printer"
-              body="RFID technology helps companies improve productivity, increase visibility, and reduce operating costs."
+              body="Just like paper printers, RFID printers are an efficient way to print visuals on your tags and to encode data."
               image="https://www.jtspeedwork.com/uploadfile/202403/29/995ddfd6b45d4c7d3864a942398c29ca_thumb.jpg"
             />
           </div>
@@ -378,23 +375,8 @@ export default function Services() {
       </div>
 
       {/* testimonials */}
-      <div style={{ paddingTop: "50px" }}>
-        <h2 className="pt-[100px] xl:pt-[150px] text-4xl text-black text-center mb-12 font-semibold">
-          Our <span className="text-warning"> Milestones </span>
-        </h2>
-        <footer className="block px-[50px] md:px-[500px] text-center text-xl mb-8 text-neutral-600">
-          Discover the diverse and impactful collaborations we’ve forged across
-          industries. At Holtech, we take pride in supporting and nurturing
-          relationships with a wide range of partners. Each partnership is
-          uniquely tailored to deliver exceptional value, fostering innovation
-          and growth for all stakeholders.
-        </footer>
-        <div className="pb-[100px] grid grid-cols-8 gap-10">
-          <div className="col-start-2 col-span-6">
-            <TestimonialCarousel />
-          </div>
-        </div>
-      </div>
+
+      <TestimonialCarousel />
 
       {/* Form */}
       <div

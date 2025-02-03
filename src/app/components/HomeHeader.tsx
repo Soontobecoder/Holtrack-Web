@@ -9,7 +9,7 @@ interface HeaderProps {
 export const HomeHeader: React.FC<HeaderProps> = ({ className, style }) => {
   const [padding, setPadding] = useState("200px");
   const [paddingTop, setPaddingTop] = useState("200px");
-  const [paddingBottom, setPaddingBottom] = useState("0px");
+  const [paddingBottom, setPaddingBottom] = useState("200px");
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 1280) {

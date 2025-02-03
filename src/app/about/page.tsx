@@ -60,7 +60,7 @@ export default function About() {
             type="button"
             data-twe-ripple-init
             data-twe-ripple-color="light"
-            className="inline-block rounded bg-warning px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-warning-100 hover:shadow-primary-2 focus:bg-warning-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-warning-600 active:shadow-primary-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+            className="inline-block rounded bg-warning px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-warning-100 hover:shadow-primary-2 focus:bg-warning-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-warning-600 active:shadow-primary-2 motion-reduce:transition-none"
           >
             <a href="/contact">Place a solution request</a>
           </button>
@@ -70,21 +70,7 @@ export default function About() {
         <CardBody />
       </div>
 
-      <h2 className="pt-[100px] xl:pt-[150px] text-4xl text-black text-center mb-12 font-semibold">
-        Our <span className="text-warning"> Milestones </span>
-      </h2>
-      <footer className="block px-[50px] md:px-[500px] text-center text-xl mb-8 text-neutral-600">
-        Discover the diverse and impactful collaborations we’ve forged across
-        industries. At Holtech, we take pride in supporting and nurturing
-        relationships with a wide range of partners. Each partnership is
-        uniquely tailored to deliver exceptional value, fostering innovation and
-        growth for all stakeholders.
-      </footer>
-      <div className="pb-[100px] xl:pb-[150px] grid grid-cols-8 gap-10">
-        <div className="col-start-2 col-span-6">
-          <TestimonialCarousel />
-        </div>
-      </div>
+      <TestimonialCarousel />
 
       <div
         style={{
@@ -120,13 +106,17 @@ export default function About() {
             Full Client <span className="text-warning"> Satisfaction</span>
           </h2>
           <h4 className="text-xl font-light leading-relaxed">
-            Our top priority is Full Client Satisfaction. We are committed to
-            delivering exceptional service, ensuring that every solution we
-            provide meets your unique needs. From project inception to ongoing
-            support, we work closely with you to guarantee a seamless
-            experience, addressing any concerns promptly and effectively. Your
-            success is our success, and we go the extra mile to ensure complete
-            satisfaction with every interaction.
+            At Holtrack, we understand that every business is different. That’s
+            why we focus on creating flexible and personalized solutions that
+            seamlessly integrate with existing infrastructure while addressing
+            key pain points such as inventory mismanagement, operational delays,
+            and theft prevention. We plan to build long-lasting relationships
+            with our clients by offering exceptional support and constant
+            innovation. Our aim is to build trust and become a valued partner in
+            their journey towards excellence. Whether you’re a small business or
+            a large enterprise, Holtrack is your trusted partner for
+            transforming operations and unlocking new possibilities with RFID
+            technology.
           </h4>
         </div>
         <div className="mx-12 self-center xl:mx-0 xl:col-start-5 xl:col-span-3">

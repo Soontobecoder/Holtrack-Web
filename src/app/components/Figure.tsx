@@ -22,9 +22,9 @@ export const Figure: React.FC<FigureProps> = ({
           alt=""
         />
       </div>
-      <figcaption className="text-sm text-neutral-300 dark:text-neutral-400">
+      {/* <figcaption className="text-sm text-neutral-300 dark:text-neutral-400">
         {caption}
-      </figcaption>
+      </figcaption> */}
     </figure>
   );
 };

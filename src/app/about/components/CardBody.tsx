@@ -28,19 +28,18 @@ export const CardBody: React.FC<CardProps> = ({ style, className }) => {
       </div>
       <div className="text-black flex flex-col mx-12 xl:mx-0 xl:col-start-5 xl:col-span-3">
         <h2 className="text-4xl font-semibold mb-6">
-          Dedicated <span className="text-warning"> Customer Support </span>
+          Dedicated <span className="text-warning"> Support </span>
         </h2>
         <h4 className="my-auto text-xl font-light leading-relaxed">
-          Our Dedicated Customer Support ensures that you’re never alone in
-          managing your technology. We provide personalized assistance tailored
-          to your unique needs, offering expert guidance from the initial setup
-          to ongoing maintenance. Whether you need troubleshooting help,
-          technical advice, or hands-on support, our knowledgeable team is
-          available to ensure your operations run smoothly and efficiently.
-          We&apos;re committed to delivering timely solutions that keep your
-          business moving forward, minimizing downtime and maximizing
-          productivity. Your success is our priority, and we&apos;re here to
-          back you every step of the way.
+          Holtrack specializes in implementing and integrating Radio Frequency
+          Identification (RFID) technology and tailored solutions to meet the
+          unique needs of every client. Our company takes on the current
+          challenges faced by warehouses and retail industries and provides them
+          with a unique automated system to streamline operations, improve
+          inventory accuracy, and increase overall efficiency. By leveraging
+          cutting-edge RFID technology, we deliver scalable solutions that offer
+          real-time visibility into assets, inventory, and supply chain
+          processes.
         </h4>
       </div>
     </div>

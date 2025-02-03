@@ -61,7 +61,7 @@ export const HomeBody: React.FC<HeaderProps> = ({ className, style }) => {
         <div className="col-start-2 md:col-start-4 col-span-6 md:col-span-2">
           <Card
             cardTitle="Warehouse System Integration"
-            cardBody="Seamlessly integrate RFID technology into your existing warehouse management system. Our solution offers real-time inventory tracking, automated data capture, and enhanced visibility across your entire supply chain."
+            cardBody="Holtrack specializes in providing RFID system integration and tailored solutions for different industries’ operations. Our team works closely with clients to understand their pain points before incorporating RFID technology into their operations."
             link="/services/warehouse_integration"
             svg={
               <svg
@@ -117,8 +117,8 @@ export const HomeBody: React.FC<HeaderProps> = ({ className, style }) => {
         </div>
         <div className="col-start-2 col-span-6 md:col-span-2 md:col-start-2">
           <Card
-            cardTitle="Custom RFID Solutions"
-            cardBody="Every business has their challenges. Holtrack offers custom RFID solutions tailored to your specific requirements. Whether you need a bespoke integration or a specialized application, our team of experts will work with you to develop a solution that fits your business perfectly."
+            cardTitle="RFID Hardwares"
+            cardBody="Holtrack provides a variety of high-quality and up-to-date RFID hardware to support clients. Our hardware offerings include a wide range of unique RFID tags, fixed RFID readers, RFID handheld readers, RFID printers, and RFID antennas."
             link="/service/custom_solutions"
             svg={
               <svg

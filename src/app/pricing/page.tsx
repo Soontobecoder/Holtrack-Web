@@ -101,7 +101,7 @@ export default function Pricing() {
         }}
       >
         <h2 className="mt-12 text-4xl text-black text-center mb-4 font-semibold">
-          Our services
+          Our <span className="text-warning"> Services </span>
         </h2>
         <footer className="block text-center mb-8 text-neutral-600 dark:text-neutral-400">
           Our in-house professional services group is here to support you every
@@ -115,21 +115,7 @@ export default function Pricing() {
         </div>
       </div>
 
-      <h2 className="pt-[100px] xl:pt-[150px] text-4xl text-black text-center mb-12 font-semibold">
-        Our <span className="text-warning"> Milestones </span>
-      </h2>
-      <footer className="block px-[50px] md:px-[500px] text-center text-xl mb-8 text-neutral-600">
-        Discover the diverse and impactful collaborations we’ve forged across
-        industries. At Holtech, we take pride in supporting and nurturing
-        relationships with a wide range of partners. Each partnership is
-        uniquely tailored to deliver exceptional value, fostering innovation and
-        growth for all stakeholders.
-      </footer>
-      <div className="pb-[150px] grid grid-cols-8 gap-10">
-        <div className="col-start-2 col-span-6">
-          <TestimonialCarousel />
-        </div>
-      </div>
+      <TestimonialCarousel />
 
       {/* Card Body */}
       <CardBody />

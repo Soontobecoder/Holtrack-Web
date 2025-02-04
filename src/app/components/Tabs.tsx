@@ -133,10 +133,10 @@ export const Tabs: React.FC<TabProps> = ({ style, className }) => {
               className="xl:px-[250px] text-justify"
               style={{ fontSize: "22px" }}
             >
-              To become the market leader in RFID solutions in Indonesia, driven
-              by our commitment to innovation, quality, and customer
-              satisfaction. We&apos;re on a mission to set the standard, exceed
-              expectations, and lead the way with unmatched excellence.
+              To lead the RFID solutions market in Indonesia by setting new
+              standards in innovation, quality, and customer satisfaction. Our
+              mission is to exceed expectations, inspire trust, constantly
+              innovate, and provide excellency in every solution we deliver.
             </div>
             <div className="pt-6">
               <button
@@ -167,11 +167,9 @@ export const Tabs: React.FC<TabProps> = ({ style, className }) => {
                 className="xl:px-[250px] text-justify"
                 style={{ fontSize: "22px" }}
               >
-                To deliver innovative RFID solutions that boost operational
-                efficiency and productivity for businesses across Indonesia,
-                powered by reliable technology and exceptional customer service.
-                We&apos;re here to make your operations smoother, faster, and
-                smarter, with a touch of excellence in every interaction.
+                To be a trusted partner for businesses and unlock the full
+                potential of RFID, propelling efficiency, visibility, security,
+                and seamless integration across all industries.
               </div>
               <div className="pt-6">
                 <button

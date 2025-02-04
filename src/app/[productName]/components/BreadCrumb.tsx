@@ -9,7 +9,7 @@ export const BreadCrumb: React.FC<Props> = ({ url }) => {
         <li>
           <a
             href="/services"
-            className="text-warning transition duration-150 ease-in-out hover:text-warning-accent-300 focus:text-warning-accent-300 active:text-warning-accent-300 motion-reduce:transition-none dark:text-warning-400"
+            className="text-warning transition duration-150 ease-in-out hover:text-warning-accent-300 focus:text-warning-accent-300 active:text-warning-accent-300 motion-reduce:transition-none"
           >
             Products
           </a>

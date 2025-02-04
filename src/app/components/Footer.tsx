@@ -17,7 +17,7 @@ export default function Footer() {
                 style={{ width: "auto", height: "50px" }}
               />
               <span className="self-center text-2xl font-semibold whitespace-nowrap text-black">
-                HOLTRACK
+                Holtech Digital Indonesia
               </span>
             </div>
           </div>
@@ -34,7 +34,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a href="/about" className="hover:underline">
-                    What are we
+                    What we are
                   </a>
                 </li>
               </ul>
@@ -80,7 +80,7 @@ export default function Footer() {
           <span className="text-sm text-gray-500 sm:text-center text-gray-400">
             © 2024{" "}
             <a href="/" className="hover:underline">
-              Holtrack™
+              PT Holtech Digital Indonesia™
             </a>
             . All Rights Reserved.
           </span>

@@ -282,10 +282,16 @@ export const Tabs = () => {
             Warehouse System Integration
           </h1>
           <p className="text-xl">
-            Seamlessly integrate RFID technology into your existing warehouse
-            management system. Our solution offers real-time inventory tracking,
-            automated data capture, and enhanced visibility across your entire
-            supply chain.
+            Holtrack specializes in providing RFID system integration and
+            tailored solutions for different industries’ operations. Our team
+            works closely with clients to understand their pain points before
+            incorporating RFID technology into their operations. We offer
+            customized solutions designed to address specific client pain
+            points, ensuring seamless integration and maximum value for each
+            client. Holtrack will also provide a formal handover with employee
+            training to ensure you are able to maximize your new RFID
+            infrastructure. We prioritize customer satisfaction, and we hope to
+            gain their trust as we hope to be your working partner.
           </p>
           <Link href={"services/warehouse_integration"}>
             <p
@@ -360,13 +366,17 @@ export const Tabs = () => {
           style={{ position: "relative" }}
           aria-labelledby="tabs-profile-tab03"
         >
-          <h1 className="text-2xl text-warning mb-5">Custom RFID Solutions</h1>
+          <h1 className="text-2xl text-warning mb-5">
+            Custom RFID Solutions and RFID Hardwares
+          </h1>
           <p className="text-xl">
-            Every business has their challenges. Holtrack offers custom RFID
-            solutions tailored to your specific requirements. Whether you need a
-            bespoke integration or a specialized application, our team of
-            experts will work with you to develop a solution that fits your
-            business perfectly.
+            In addition to system integration, Holtrack provides a variety of
+            high-quality and up-to-date RFID hardware to support clients as
+            well. Our hardware offerings include a wide range of unique RFID
+            tags, fixed RFID readers, RFID handheld readers, RFID printers, and
+            RFID antennas. Whether you’re upgrading your existing system or
+            building a new RFID infrastructure, Holtrack provides the
+            flexibility and options for your needs.
           </p>
           <Link href={"services/custom_solution"}>
             <p

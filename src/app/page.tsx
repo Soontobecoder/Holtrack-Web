@@ -101,7 +101,7 @@ const Home = () => {
         <div className="col-start-4 col-span-3 xl:col-start-5 xl:col-span-1 z-10">
           <CardTitle
             image="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dHdvJTIwcGVyc29uJTIwdGFsa2luZyUyMGluJTIwb2ZmaWNlfGVufDB8fDB8fHww"
-            cardBody="Some quick example text to build on the card title and make up the bulk of the card's content."
+            cardBody="We tailor our solutions to fit your unique business needs, ensuring seamless integration and maximum efficiency."
             cardTitle={
               <>
                 Very{" "}
@@ -178,7 +178,7 @@ const Home = () => {
         <h2 className="text-center text-black  text-2xl md:text-4xl xl:text-6xl font-semibold xl:mt-12">
           Our <span className="text-warning">Technologies</span>
         </h2>
-        <footer className="block text-center px-[5%] xl:px-[30%] mt-4 text-neutral-600 text-xs md:text-lg xl:text-xl dark:text-neutral-400">
+        <footer className="block text-center px-[5%] xl:px-[30%] mt-4 text-neutral-600 text-xs md:text-lg xl:text-xl">
           With our technologies, you can transform your warehouse into a
           high-performing hub, ready to meet the dynamic demands of today’s
           marketplace.
@@ -220,7 +220,7 @@ const Home = () => {
           {" "}
           Why <span className="text-warning">Holtrack</span> ?
         </h2>
-        <footer className="block px-[10%] text-center mt-1 text-xs md:text-lg xl:text-xl text-neutral-600 dark:text-neutral-400 font-bold">
+        <footer className="block px-[10%] text-center mt-1 text-xs md:text-lg xl:text-xl text-neutral-600 font-bold">
           Contact us to know more of our strengths and why this is right for you
         </footer>
         <Tabs className="p-4 md:p-12 md:pt-4 md:ml-12 md:mr-12" />

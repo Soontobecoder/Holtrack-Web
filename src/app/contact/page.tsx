@@ -67,7 +67,7 @@ export default function Contact() {
         <div className="xl:grid xl:grid-cols-8 xl:p-0 p-12 gap-10">
           <div className="col-start-2 col-span-3">
             <h2 className="text-3xl text-black text-justify font-semibold">
-              Want to discover more how to make us right for you? Contact us, We
+              Want to discover more how to make us right for you? Contact us, we
               are happy to assist you as your business partner
             </h2>
             <p className="text-base pt-[40px] text-justify text-black ">

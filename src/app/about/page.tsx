@@ -56,14 +56,16 @@ export default function About() {
           style={{ paddingTop: "30px" }}
           className="row-start-4 col-span-6 col-start-2"
         >
-          <button
-            type="button"
-            data-twe-ripple-init
-            data-twe-ripple-color="light"
-            className="inline-block rounded bg-warning px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-warning-100 hover:shadow-primary-2 focus:bg-warning-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-warning-600 active:shadow-primary-2 motion-reduce:transition-none"
-          >
-            <a href="/contact">Place a solution request</a>
-          </button>
+          <a href={"/contact"}>
+            <button
+              type="button"
+              data-twe-ripple-init
+              data-twe-ripple-color="light"
+              className="inline-block rounded bg-warning px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-warning-100 hover:shadow-primary-2 focus:bg-warning-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-warning-600 active:shadow-primary-2 motion-reduce:transition-none"
+            >
+              Place a solution request
+            </button>
+          </a>
         </div>
       </div>
       <div>

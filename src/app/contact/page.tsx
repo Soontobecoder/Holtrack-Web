@@ -77,7 +77,7 @@ export default function Contact() {
               request form or call the number below
             </p>
             <p className="xl:text-lg pt-[40px] text-black ">
-              <span className="font-bold">+1 (877)-7674-9115 </span> |
+              <span className="font-bold">+62 (822)-5888-8701 </span> |
               <a
                 href="mailto: sales@holtrack.com"
                 className="font-semibold text-warning"
@@ -334,7 +334,7 @@ export default function Contact() {
               Jakarta Barat, Daerah Khusus Ibukota Jakarta 11830
             </div>
             <div className="pt-[30px] text-black text-base ">
-              <span className="font-semibold">Phone</span> (778)-997-9115
+              <span className="font-semibold">Phone</span> +62 (822)-5888-8701
             </div>
             <div className="text-black text-base ">
               <span className="font-semibold">Email</span> sales@holtrack.com

@@ -1,6 +1,8 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 // import { Partners } from "./components/Partners";
+import emailjs from "@emailjs/browser";
+import Toast from "@/app/components/Toast";
 
 export default function Contact() {
   useEffect(() => {
@@ -19,35 +21,58 @@ export default function Contact() {
     init();
   }, []);
 
-  const [data, setData] = useState({
-    firstName: "",
-    lastName: "",
-    businessName: "",
-    phoneNumber: "",
-    industry: "",
-    email: "",
-    city: "",
-    region: "",
-    postalCode: "",
-    address: "",
-    subscribe: false,
-  });
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<{
+    message: string;
+    type: "success" | "error";
+  } | null>(null);
+  const form = useRef<HTMLFormElement>(null);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
-    setData((oldState) => ({
-      ...oldState,
-      [name]: type === "checkbox" ? checked : value,
-    }));
-  };
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   const { name, value, type, checked } = e.target;
+  //   setData((oldState) => ({
+  //     ...oldState,
+  //     [name]: type === "checkbox" ? checked : value,
+  //   }));
+  // };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted:", data);
-    // You can send formData to an API or handle it as needed
+    setLoading(true);
+    setStatus(null);
+
+    try {
+      if (form.current) {
+        await emailjs.sendForm(
+          "service_n0qiehj",
+          "template_zo3evh9",
+          form.current,
+          "64_EvNGqGy4GGgw32"
+        );
+        setStatus({ message: "Message sent successfully!", type: "success" });
+        form.current.reset();
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus({
+        message: "Failed to send message. Please try again.",
+        type: "error",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
   return (
     <div style={{ backgroundColor: "#ffffff" }}>
+      {/* Show Toast if status is set */}
+      {status && (
+        <Toast
+          type={status.type}
+          message={status.message}
+          onClose={() => setStatus(null)}
+        />
+      )}
+
       {/* Header */}
       <div className="relative top-20 h-[300px] overflow-hidden rounded-lg bg-[url('https://lucknowrecreation.com/wp-content/uploads/2018/04/Monthly-Website-Header-background-e1522931579825.jpg')] bg-cover bg-no-repeat text-white">
         <div className="absolute bottom-0 left-0 right-0 top-0 overflow-hidden bg-black/60 bg-fixed">
@@ -90,7 +115,7 @@ export default function Contact() {
 
           {/* Form */}
           <div className="pt-10 xl:pt-0 col-start-2 col-span-4 row-start-2">
-            <form onSubmit={handleSubmit}>
+            <form ref={form} onSubmit={handleSubmit}>
               <div className="grid grid-cols-2 gap-4">
                 {/* <!--First name input--> */}
                 <div className="relative mb-6" data-twe-input-wrapper-init>
@@ -101,8 +126,6 @@ export default function Contact() {
                     id="exampleInput123"
                     required
                     aria-describedby="emailHelp123"
-                    value={data.firstName}
-                    onChange={handleChange}
                     placeholder="First name"
                   />
                   <label className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary">
@@ -114,8 +137,6 @@ export default function Contact() {
                 <div className="relative mb-6" data-twe-input-wrapper-init>
                   <input
                     type="text"
-                    value={data.lastName}
-                    onChange={handleChange}
                     name="lastName"
                     required
                     className="peer text-black block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
@@ -134,8 +155,6 @@ export default function Contact() {
                 <div className="relative mb-6" data-twe-input-wrapper-init>
                   <input
                     type="email"
-                    value={data.email}
-                    onChange={handleChange}
                     name="email"
                     required
                     className="peer block text-black min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
@@ -149,8 +168,6 @@ export default function Contact() {
                 <div className="relative mb-6" data-twe-input-wrapper-init>
                   <input
                     type="tel"
-                    value={data.phoneNumber}
-                    onChange={handleChange}
                     required
                     name="phoneNumber"
                     className="peer block text-black min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
@@ -168,8 +185,6 @@ export default function Contact() {
               <div className="relative mb-6" data-twe-input-wrapper-init>
                 <input
                   type="text"
-                  value={data.businessName}
-                  onChange={handleChange}
                   name="businessName"
                   className="peer block text-black min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
                   id="exampleInput126"
@@ -184,8 +199,6 @@ export default function Contact() {
               <div className="relative mb-6" data-twe-input-wrapper-init>
                 <input
                   type="text"
-                  value={data.industry}
-                  onChange={handleChange}
                   name="industry"
                   className="peer block text-black min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
                   id="exampleInput126"
@@ -200,8 +213,6 @@ export default function Contact() {
               <div className="relative mb-6" data-twe-input-wrapper-init>
                 <input
                   type="text"
-                  value={data.address}
-                  onChange={handleChange}
                   name="address"
                   className="peer block text-black min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
                   id="exampleInput126"
@@ -223,8 +234,6 @@ export default function Contact() {
                     id="exampleInput123"
                     required
                     aria-describedby="emailHelp123"
-                    value={data.city}
-                    onChange={handleChange}
                     placeholder="First name"
                   />
                   <label className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary">
@@ -236,8 +245,6 @@ export default function Contact() {
                 <div className="relative mb-6" data-twe-input-wrapper-init>
                   <input
                     type="text"
-                    value={data.region}
-                    onChange={handleChange}
                     name="region"
                     required
                     className="peer text-black block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
@@ -254,8 +261,6 @@ export default function Contact() {
                 <div className="relative mb-6" data-twe-input-wrapper-init>
                   <input
                     type="text"
-                    value={data.postalCode}
-                    onChange={handleChange}
                     name="postalCode"
                     required
                     className="peer text-black block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
@@ -271,9 +276,10 @@ export default function Contact() {
 
               <div className="relative mb-6" data-twe-input-wrapper-init>
                 <textarea
-                  className="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
+                  className="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 text-black motion-reduce:transition-none [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
                   id="message"
                   rows={3}
+                  name="message"
                   required
                   placeholder="Message"
                 ></textarea>

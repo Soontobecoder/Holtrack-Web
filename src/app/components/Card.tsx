@@ -42,7 +42,7 @@ export const Card: React.FC<CardProps> = ({
       <p className="text-slate-500 group-hover:text-white text-xs md:text-sm">
         {cardBody}
       </p>
-      <Link href={link}>
+      {/* <Link href={link}>
         <button className="absolute bottom-1 group-hover:text-white text-black right-6 inline-flex items-center px-3 py-2 text-sm font-medium text-center">
           Read more
           <svg
@@ -61,7 +61,7 @@ export const Card: React.FC<CardProps> = ({
             />
           </svg>
         </button>
-      </Link>
+      </Link> */}
     </div>
   );
 };

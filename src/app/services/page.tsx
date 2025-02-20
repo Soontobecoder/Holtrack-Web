@@ -9,6 +9,7 @@ import { ScrollerList } from "../components/ScrollerList";
 import { Gallery } from "../components/Gallery";
 import { TestimonialCarousel } from "../components/TestimonialCarousel";
 import { Form } from "../components/Form";
+import PageFooter from "../components/PageFooter";
 
 export default function Services() {
   const [isReducedMotion, setIsReducedMotion] = useState(false);
@@ -387,7 +388,7 @@ export default function Services() {
           clipPath: "polygon(0 10%, 100% 0, 100% 100%, 0 100%)",
         }}
       >
-        <h2 className="mt-12 text-4xl xl:text-6xl text-black text-center mb-4 font-semibold">
+        {/* <h2 className="mt-12 text-4xl xl:text-6xl text-black text-center mb-4 font-semibold">
           Have a <span className="text-warning">Question?</span>
         </h2>
         <footer className="block text-center mb-8 text-neutral-600 dark:text-neutral-400">
@@ -429,7 +430,8 @@ export default function Services() {
             </h2>
             <Form />
           </div>
-        </div>
+        </div> */}
+        <PageFooter />
       </div>
     </div>
   );

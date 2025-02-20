@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Tabs } from "../../about/components/Tabs";
 import { TestimonialCarousel } from "../../components/TestimonialCarousel";
 import { Form } from "../../components/Form";
+import PageFooter from "@/app/components/PageFooter";
 
 interface Data {
   name: string;
@@ -100,7 +101,7 @@ export default function ServiceDetails({
             type="button"
             className="inline-block rounded bg-warning px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-warning-3 transition duration-150 ease-in-out hover:bg-warning-accent-300 hover:shadow-warning-2 focus:bg-warning-accent-300 focus:shadow-warning-2 focus:outline-none focus:ring-0 active:bg-warning-600 active:shadow-warning-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
           >
-            Contact our customer support team now!
+            <a href="/contact">Contact our customer support team now!</a>
           </button>
         </div>
       </div>
@@ -192,7 +193,7 @@ export default function ServiceDetails({
           clipPath: "polygon(0 10%, 100% 0, 100% 100%, 0 100%)",
         }}
       >
-        <h2 className="mt-12 text-4xl xl:text-6xl text-black text-center mb-4 font-semibold">
+        {/* <h2 className="mt-12 text-4xl xl:text-6xl text-black text-center mb-4 font-semibold">
           Have a <span className="text-warning">Question?</span>
         </h2>
         <footer className="block text-center mb-8 text-neutral-600 dark:text-neutral-400">
@@ -234,7 +235,9 @@ export default function ServiceDetails({
             </h2>
             <Form />
           </div>
-        </div>
+        </div> */}
+
+        <PageFooter />
       </div>
     </div>
   );

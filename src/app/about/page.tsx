@@ -4,6 +4,7 @@ import { CardBody } from "./components/CardBody";
 import { TestimonialCarousel } from "../components/TestimonialCarousel";
 import { Tabs } from "./components/Tabs";
 import { Form } from "../components/Form";
+import PageFooter from "@/app/components/PageFooter";
 
 export default function About() {
   return (
@@ -139,7 +140,7 @@ export default function About() {
           clipPath: "polygon(0 10%, 100% 0, 100% 100%, 0 100%)",
         }}
       >
-        <h2 className="mt-12 text-4xl xl:text-6xl text-black text-center mb-4 font-semibold">
+        {/* <h2 className="mt-12 text-4xl xl:text-6xl text-black text-center mb-4 font-semibold">
           Have a <span className="text-warning">Question?</span>
         </h2>
         <footer className="block text-center font-semibold mb-8 text-neutral-600 dark:text-neutral-400">
@@ -181,7 +182,9 @@ export default function About() {
             </h2>
             <Form />
           </div>
-        </div>
+        </div> */}
+
+        <PageFooter />
       </div>
     </div>
   );

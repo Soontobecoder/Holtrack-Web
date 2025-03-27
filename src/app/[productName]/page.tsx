@@ -1,107 +1,22 @@
 "use client";
 import { useRouter } from "next/navigation";
 import Datas from "../shared/products.json";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Header } from "./components/Header";
 import { BreadCrumb } from "./components/BreadCrumb";
 import { ProductCard } from "./components/ProductCard";
-import { ImageSlider } from "./components/ImageSlider";
+import Tag from "./components/Tag";
+import {
+  Data,
+  RFIDTag,
+  Antenna,
+  FixedReader,
+  GateWay,
+  Handheld,
+  Printer,
+} from "./lib/types";
 import "./style.css";
-
-interface Data {
-  id: number;
-  assetType:
-    | "RFIDTag"
-    | "Antenna"
-    | "FixedReader"
-    | "GateWay"
-    | "HandheldReader"
-    | "Printer";
-  device: Array<RFIDTag | Antenna | FixedReader | GateWay | Handheld | Printer>;
-}
-
-interface RFIDTag {
-  orderQuantity: string;
-  features: Array<string>;
-  tagType: string;
-  name: string;
-  dimension: string;
-  application: Array<string>;
-}
-
-interface Antenna {
-  dimension: string;
-  weight: number;
-  chord: string;
-  temperature: string;
-  color: string;
-  name: string;
-  material: string;
-}
-
-interface FixedReader {
-  orderQuantity: string;
-  features: Array<string>;
-  weight: number;
-  range: string;
-  speed: string;
-  RFPower: string;
-  RFInterface: string;
-  communicationPort: string;
-  powerConsumption: string;
-  voltage: string;
-  material: string;
-  name: string;
-  dimension: string;
-  application: Array<string>;
-}
-
-interface GateWay {
-  dimension: string;
-  weight: number;
-  name: string;
-  antenna: string;
-  frequency: string;
-  RFPower: string;
-  speed: string;
-  trigger: string;
-  notification: string;
-  range: string;
-  communicationPort: string;
-  powerConsumption: string;
-  voltage: string;
-  material: string;
-  temperature: string;
-  humidity: string;
-}
-
-interface Handheld {
-  dimension: string;
-  weight: number;
-  range: string;
-  display: string;
-  OS: string;
-  CPU: string;
-  storage: string;
-  dataCommunication: {
-    WWAN: string;
-    WLAN: string;
-    WPAN: string;
-    GPS: string;
-  };
-}
-
-interface Printer {
-  printMode: string;
-  dimension: string;
-  weight: number;
-  speed: string;
-  interface: string;
-  maximumPrintWidth: string;
-  RFID: Array<{
-    spec: string;
-  }>;
-}
+import PageFooter from "../components/PageFooter";
 
 export default function ProductDetails({
   params,
@@ -109,6 +24,7 @@ export default function ProductDetails({
   params: { productName: string };
 }) {
   const router = useRouter();
+  const [rightHeight, setRightHeight] = useState(0);
 
   const data: Data | undefined = Datas.find(
     (el): el is Data => el.assetType == params.productName
@@ -124,26 +40,17 @@ export default function ProductDetails({
     return null; // Or you could show a loading spinner until the redirect happens
   }
 
+  const handleHeight = (data: number) => {
+    setRightHeight(data);
+    console.log(data, "ini tinggi right element");
+  };
+
   const renderDetails = () => {
     switch (data.assetType) {
       case "RFIDTag":
-        const rfidTag = data as unknown as RFIDTag;
-        return (
-          <div className="xl:grid grid-cols-8">
-            <div className="col-span-4">
-              <h2 className="text-2xl font-bold mb-4">Slideshow Indicators</h2>
-              <p className="mb-6">
-                Using images to indicate how many slides there are in the
-                slideshow, and highlight the image the user is currently
-                viewing.
-              </p>
-              <ImageSlider />
-            </div>
-            <h1>{rfidTag.name}</h1>
-            <p>{rfidTag.dimension}</p>
-            {/* render other properties specific to RFIDTag */}
-          </div>
-        );
+        const rfidTag = data;
+        // setRightParent is using useRef to capture the element of the right side so that the left side element can be assigned a height based on the element on the right side
+        return <Tag setRightParent={handleHeight} rfidTag={rfidTag} />;
       case "Antenna":
         const antenna = data as unknown as Antenna;
         return (
@@ -181,24 +88,50 @@ export default function ProductDetails({
     <div style={{ backgroundColor: "white", color: "black" }}>
       <Header Title="Products" />
       <BreadCrumb url={data.assetType} />
-      <div className="xl:grid pt-12 grid-cols-8 gap-4">
-        <div className="col-span-2 flex flex-col items-center xl:border-r-4">
-          <h1 className="text-center text-xl"> Explore our Other Products</h1>
-          <div className="container xl:block px-2 flex gap-10 w-full xl:h-screen xl:w-max xl:overflow-y-scroll overflow-x-scroll xl:overflow-x-hidden mt-4">
+      <div className="flex flex-col-reverse xl:block xl:grid pt-12 grid-cols-8 gap-4">
+        {/* Left side */}
+        <div
+          className="col-span-2 flex flex-col items-center xl:border-r-4 mb-10"
+          style={rightHeight > 0 ? { height: `${rightHeight}px` } : {}}
+        >
+          <h1 className="text-center font-bold text-2xl">
+            {" "}
+            Explore our Other Products
+          </h1>
+          <div
+            style={{ direction: "rtl" }}
+            className="container xl:block px-2 flex my-4 xl:w-max xl:pl-12 xl:overflow-y-scroll overflow-x-scroll xl:overflow-x-hidden mt-4"
+          >
             {Datas.map(
               (item, index) =>
                 item.assetType !== params.productName && (
                   <ProductCard
+                    style={{ direction: "ltr" }}
+                    item={item}
                     key={item.id}
-                    className={`shrink-0 w-64 xl:w-full ${
-                      index === Datas.length - 1 ? "" : "xl:border-b-2"
+                    className={`shrink-0 w-64 xl:mb-0 mb-8 xl:ml-0 ml-8 xl:mr-0 mr-8 xl:w-full ${
+                      index === Datas.length - 1 ? "" : "xl:mt-8 xl:border-b-2"
                     }`}
                   />
                 )
             )}
           </div>
         </div>
+
+        {/* Right Side */}
         <div className="col-span-6">{renderDetails()}</div>
+      </div>
+
+      {/* Footer */}
+      <div
+        style={{
+          backgroundColor: "#EEEEEF",
+          paddingTop: "50px",
+          paddingBottom: "50px",
+          clipPath: "polygon(0 10%, 100% 0, 100% 100%, 0 100%)",
+        }}
+      >
+        <PageFooter />
       </div>
     </div>
   );

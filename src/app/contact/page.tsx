@@ -13,7 +13,6 @@ export default function Contact() {
         const elements = document.querySelectorAll(
           "[data-twe-input-wrapper-init]"
         );
-        console.log("Elements to initialize:", elements);
       } catch (error) {
         console.error("TWE initialization failed", error);
       }

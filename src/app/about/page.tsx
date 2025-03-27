@@ -19,7 +19,6 @@ export default function About() {
       />
 
       {/* center card */}
-
       <CardHorizontal
         cardTitle="Need help?"
         className="drop-shadow-xl"
@@ -140,50 +139,6 @@ export default function About() {
           clipPath: "polygon(0 10%, 100% 0, 100% 100%, 0 100%)",
         }}
       >
-        {/* <h2 className="mt-12 text-4xl xl:text-6xl text-black text-center mb-4 font-semibold">
-          Have a <span className="text-warning">Question?</span>
-        </h2>
-        <footer className="block text-center font-semibold mb-8 text-neutral-600 dark:text-neutral-400">
-          Feel free to ask us anything. We are glad to be of service!
-        </footer>
-        <div
-          style={{ paddingBottom: "50px" }}
-          className="mx-10 xl:mx-0 xl:grid xl:grid-cols-8 gap-10"
-        >
-          <div className="col-start-2 col-span-3 self-center text-center">
-            <img
-              src="https://tecdn.b-cdn.net/img/new/slides/041.jpg"
-              style={{ width: "435px", height: "130px" }}
-              alt="..."
-              className="mx-auto rounded-lg"
-            />
-            <div>
-              <h2 className="mt-5 text-2xl text-black mb-4 font-semibold">
-                Get Started Today
-              </h2>
-              <p className="text-black text-start">
-                Ready to transform your operations with RFID technology? Contact
-                us to learn how Holtrack can deliver the solutions you need to
-                succeed.
-              </p>
-              <p className="text-black text-start mt-4">
-                Simply call +62 (822)-5888-8701, email{" "}
-                <span style={{ textDecoration: "underline", color: "#E4A11B" }}>
-                  {" "}
-                  sales@holtrack.com
-                </span>
-                , or fill out our form! We’re here to help.
-              </p>
-            </div>
-          </div>
-          <div className="mt-6 xl:mt-0 col-start-5 col-span-3">
-            <h2 className="mt-5 text-2xl text-center mb-10 text-black mb-4 font-semibold">
-              Or send us your question and we will get back to you!
-            </h2>
-            <Form />
-          </div>
-        </div> */}
-
         <PageFooter />
       </div>
     </div>

@@ -108,7 +108,7 @@ export default function ServiceDetails({
 
       {/* Lower body */}
       {data.Head_body && data.description_Body ? (
-        <div className="bg-primary-900 mt-10 py-10 xl:mx-0 xl:grid xl:grid-cols-8 gap-6">
+        <div className="bg-primary-900 mt-10 py-10 px-5 xl:px-0 xl:grid xl:grid-cols-8 gap-6">
           <div className="col-start-4 col-span-3 ">
             <h2 className="text-white text-4xl font-semibold">
               {data.Head_body}
@@ -119,7 +119,7 @@ export default function ServiceDetails({
               {data.description_Body}
             </h4>
           </div>
-          <div className="row-start-1 row-span-2 col-start-2 col-span-2">
+          <div className="xl:block hidden row-start-1 row-span-2 col-start-2 col-span-2">
             <img
               src={data.image_1}
               className="w-full rounded-lg bg-white "
@@ -133,7 +133,7 @@ export default function ServiceDetails({
 
       {/* Footer body */}
       {data.Head_footer && data.description_footer ? (
-        <div className="mt-10 py-10 xl:mx-0 xl:grid xl:grid-cols-8 gap-6">
+        <div className="mt-10 py-10 px-5 xl:px-0 xl:grid xl:grid-cols-8 gap-6">
           <div className="col-start-2 col-span-3 ">
             <h2 className="text-black text-4xl font-semibold">
               {data.Head_footer}
@@ -144,7 +144,7 @@ export default function ServiceDetails({
               {data.description_footer}
             </h4>
           </div>
-          <div className="row-start-1 row-span-2 col-start-6 col-span-2">
+          <div className="xl:block hidden row-start-1 row-span-2 col-start-6 col-span-2">
             <img
               src={data.image_1}
               className="w-full rounded-lg bg-white "

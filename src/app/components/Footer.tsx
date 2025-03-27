@@ -17,7 +17,7 @@ export default function Footer() {
                 style={{ width: "auto", height: "50px" }}
               />
               <span className="self-center text-2xl font-semibold whitespace-nowrap text-black">
-                Holtech Digital Indonesia
+                HOLTRACK
               </span>
             </div>
           </div>

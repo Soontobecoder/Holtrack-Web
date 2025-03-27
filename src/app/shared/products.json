@@ -2,31 +2,196 @@
   {
     "id": 1,
     "assetType": "RFIDTag",
-    "device": {}
+    "device": [
+      {
+        "image": "https://drive.google.com/uc?id=1eWkKzOG4hd29ZXd5p3foeVJjpOdTMy0V",
+        "orderQuantity": "2000 Tags",
+        "features": [
+          "Reading range: 0-6m",
+          "Material: PET Plastic",
+          "unusable if asset made out of metal"
+        ],
+        "tagType": "Sticker Tag",
+        "name": "RFID Sticker Tags",
+        "dimension": "73mm x 20mm",
+        "description": "Straightforward and dependable, your standard tagging on non-metal surfaces.",
+        "application": [
+          "Retail items (clothes, shoes, etc)",
+          "Asset's or furnitures"
+        ]
+      },
+      {
+        "image": "https://drive.google.com/uc?id=1GEj7HCNUSMdVXPaS5QOpbi_JyUZhf_yl",
+        "orderQuantity": "200 Cards",
+        "features": ["Reading range: 0-5m", "Material: PVC Plastic"],
+        "tagType": "Card Tag",
+        "name": "RFID Card Tags",
+        "dimension": "85mm x 54mm",
+        "application": ["Hotel key card", "Access / entry card"]
+      },
+      {
+        "image": "https://drive.google.com/uc?id=1YEaXkD3yNZl39Ytb-3QVbu3Hhn-xuAzC",
+        "orderQuantity": "1 pcs",
+        "features": [
+          "Reading range: 0-6m",
+          "Waterproof",
+          "Anti-collision",
+          "Material: ABS Plastic"
+        ],
+        "tagType": "Zip-Tie Tag",
+        "name": "RFID Cable Tie Tag",
+        "dimension": "210mm x 5.3mm x 2mm",
+        "application": ["Lock", "Food secure", "Asset secure"]
+      },
+      {
+        "image": "https://drive.google.com/uc?id=1YEaXkD3yNZl39Ytb-3QVbu3Hhn-xuAzC",
+        "orderQuantity": "1 pcs",
+        "features": [
+          "Reading range: 0-6m",
+          "Waterproof",
+          "Anti-collision",
+          "Material: ABS Plastic"
+        ],
+        "tagType": "Zip-Tie Tag",
+        "name": "RFID Cable Tie Tag",
+        "dimension": "210mm x 5.3mm x 2mm",
+        "application": ["Lock", "Food secure", "Asset secure"]
+      },
+      {
+        "image": "https://drive.google.com/uc?id=1YEaXkD3yNZl39Ytb-3QVbu3Hhn-xuAzC",
+        "orderQuantity": "1 pcs",
+        "features": [
+          "Reading range: 0-6m",
+          "Waterproof",
+          "Anti-collision",
+          "Material: ABS Plastic"
+        ],
+        "tagType": "Zip-Tie Tag",
+        "name": "RFID Cable Tie Tag",
+        "dimension": "210mm x 5.3mm x 2mm",
+        "application": ["Lock", "Food secure", "Asset secure"]
+      }
+    ]
   },
   {
     "id": 2,
     "assetType": "GateWay",
-    "device": {}
+    "device": [
+      {
+        "image": "https://drive.google.com/uc?id=1A9ezVuOZOlLSxsfwOLgr610iaH-AGFww",
+        "orderQuantity": "2000 Tags",
+        "features": [
+          "Reading range: 0-6m",
+          "Material: PET Plastic",
+          "unusable if asset made out of metal"
+        ],
+        "name": "RFID Gate-way",
+        "dimension": "73mm x 20mm",
+        "application": [
+          "Retail items (clothes, shoes, etc)",
+          "Asset's or furnitures"
+        ],
+        "type": "Fixed Reader"
+      }
+    ]
   },
   {
     "id": 3,
     "assetType": "HandheldReader",
-    "device": {}
+    "device": [
+      {
+        "image": "https://drive.google.com/uc?id=1eWkKzOG4hd29ZXd5p3foeVJjpOdTMy0V",
+        "orderQuantity": "2000 Tags",
+        "features": [
+          "Reading range: 0-6m",
+          "Material: PET Plastic",
+          "unusable if asset made out of metal"
+        ],
+        "name": "RFID Sticker Tags",
+        "dimension": "73mm x 20mm",
+        "application": [
+          "Retail items (clothes, shoes, etc)",
+          "Asset's or furnitures"
+        ]
+      }
+    ]
   },
   {
     "id": 4,
     "assetType": "FixedReader",
-    "device": {}
+    "device": [
+      {
+        "image": "https://drive.google.com/uc?id=1eWkKzOG4hd29ZXd5p3foeVJjpOdTMy0V",
+        "orderQuantity": "2000 Tags",
+        "features": [
+          "Reading range: 0-6m",
+          "Material: PET Plastic",
+          "unusable if asset made out of metal"
+        ],
+        "name": "RFID Sticker Tags",
+        "dimension": "73mm x 20mm",
+        "application": [
+          "Retail items (clothes, shoes, etc)",
+          "Asset's or furnitures"
+        ]
+      }
+    ]
   },
   {
     "id": 5,
     "assetType": "Printer",
-    "device": {}
+    "device": [
+      {
+        "image": "https://drive.google.com/uc?id=1Jo0L2rANX8bgxL0LEOkIvnbZ12yyr2FB",
+        "orderQuantity": "2000 Tags",
+        "features": [
+          "Reading range: 0-6m",
+          "Material: PET Plastic",
+          "unusable if asset made out of metal"
+        ],
+        "name": "RFID Sticker Tags",
+        "dimension": "73mm x 20mm",
+        "application": [
+          "Retail items (clothes, shoes, etc)",
+          "Asset's or furnitures"
+        ]
+      }
+    ]
   },
   {
     "id": 6,
     "assetType": "Antenna",
-    "device": {}
+    "device": [
+      {
+        "image": "https://drive.google.com/uc?id=1HkJAT-E1P192Qg-EOwQWrKApbw9F9foM",
+        "orderQuantity": "2000 Tags",
+        "features": [
+          "Reading range: 0-6m",
+          "Material: PET Plastic",
+          "unusable if asset made out of metal"
+        ],
+        "name": "UHF 6dBi Circular Polarization Antenna",
+        "dimension": "73mm x 20mm",
+        "application": [
+          "Retail items (clothes, shoes, etc)",
+          "Asset's or furnitures"
+        ]
+      },
+      {
+        "image": "https://drive.google.com/uc?id=1y55FJLdJtkeOiw4FxHgQoqOJ1zMVsikp",
+        "orderQuantity": "2000 Tags",
+        "features": [
+          "Reading range: 0-6m",
+          "Material: PET Plastic",
+          "unusable if asset made out of metal"
+        ],
+        "name": "UHF 8dBi Circular Polarization Antenna ",
+        "dimension": "73mm x 20mm",
+        "application": [
+          "Retail items (clothes, shoes, etc)",
+          "Asset's or furnitures"
+        ]
+      }
+    ]
   }
 ]

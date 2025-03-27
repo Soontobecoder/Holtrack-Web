@@ -20,7 +20,7 @@ export const TestimonialCarousel = () => {
       </h2>
       <footer className="block px-[50px] xl:px-[600px] text-center text-xl mb-10 text-neutral-600">
         We take pride in our collaborations across industries, helping partners
-        achieve success through tailored solutions. At Holtech, every
+        achieve success through tailored solutions. At Holtrack, every
         partnership is built on innovation, delivering exceptional value and
         growth for all stakeholders.
       </footer>

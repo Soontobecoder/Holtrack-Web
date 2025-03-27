@@ -4,7 +4,6 @@
     "assetType": "RFIDTag",
     "device": [
       {
-        "image": "https://drive.google.com/uc?id=1eWkKzOG4hd29ZXd5p3foeVJjpOdTMy0V",
         "orderQuantity": "2000 Tags",
         "features": [
           "Reading range: 0-6m",
@@ -13,19 +12,21 @@
         ],
         "tagType": "Sticker Tag",
         "name": "RFID Sticker Tags",
-        "dimension": "73mm x 20mm",
+        "image": "https://drive.google.com/uc?id=1eWkKzOG4hd29ZXd5p3foeVJjpOdTMy0V",
         "description": "Straightforward and dependable, your standard tagging on non-metal surfaces.",
+        "dimension": "73mm x 20mm",
         "application": [
           "Retail items (clothes, shoes, etc)",
           "Asset's or furnitures"
         ]
       },
       {
-        "image": "https://drive.google.com/uc?id=1GEj7HCNUSMdVXPaS5QOpbi_JyUZhf_yl",
         "orderQuantity": "200 Cards",
         "features": ["Reading range: 0-5m", "Material: PVC Plastic"],
         "tagType": "Card Tag",
         "name": "RFID Card Tags",
+        "image": "https://drive.google.com/uc?id=1GEj7HCNUSMdVXPaS5QOpbi_JyUZhf_yl",
+        "description": "Short range reliable card usually used for access control.",
         "dimension": "85mm x 54mm",
         "application": ["Hotel key card", "Access / entry card"]
       },
@@ -40,6 +41,7 @@
         ],
         "tagType": "Zip-Tie Tag",
         "name": "RFID Cable Tie Tag",
+        "description": "Straightforward and securable for awkward surface areas.",
         "dimension": "210mm x 5.3mm x 2mm",
         "application": ["Lock", "Food secure", "Asset secure"]
       },
@@ -52,6 +54,7 @@
           "Anti-collision",
           "Material: ABS Plastic"
         ],
+        "description": "Same application with a normal zip-tie tag but this is reusable.",
         "tagType": "Zip-Tie Tag",
         "name": "RFID Cable Tie Tag",
         "dimension": "210mm x 5.3mm x 2mm",
@@ -66,6 +69,7 @@
           "Anti-collision",
           "Material: ABS Plastic"
         ],
+        "description": "Same application with a normal zip-tie tag but this is reusable.",
         "tagType": "Zip-Tie Tag",
         "name": "RFID Cable Tie Tag",
         "dimension": "210mm x 5.3mm x 2mm",

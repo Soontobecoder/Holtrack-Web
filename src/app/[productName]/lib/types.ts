@@ -3,6 +3,7 @@ export interface RFIDTag {
   features: Array<string>;
   tagType: string;
   name: string;
+  image: string;
   description: string;
   dimension: string;
   application: Array<string>;

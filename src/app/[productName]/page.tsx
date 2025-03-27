@@ -26,8 +26,13 @@ export default function ProductDetails({
   const router = useRouter();
   const [rightHeight, setRightHeight] = useState(0);
 
-  const data: Data | undefined = Datas.find(
-    (el): el is Data => el.assetType == params.productName
+  // data types is not ready
+  // const data: Array<Data> | undefined = Datas.find(
+  //   (el): el is Data => el.assetType == params.productName
+  // );
+
+  const data: any | undefined = Datas.find(
+    (el: any) => el.assetType == params.productName
   );
 
   useEffect(() => {

@@ -3,6 +3,7 @@ export interface RFIDTag {
   features: Array<string>;
   tagType: string;
   name: string;
+  description: string;
   dimension: string;
   application: Array<string>;
 }
@@ -10,6 +11,7 @@ export interface RFIDTag {
 export interface Antenna {
   dimension: string;
   weight: number;
+  features: Array<string>;
   chord: string;
   temperature: string;
   color: string;
@@ -36,6 +38,7 @@ export interface FixedReader {
 
 export interface GateWay {
   dimension: string;
+  features: Array<string>;
   weight: number;
   name: string;
   antenna: string;
@@ -61,6 +64,7 @@ export interface Handheld {
   OS: string;
   CPU: string;
   storage: string;
+  features: Array<string>;
   dataCommunication: {
     WWAN: string;
     WLAN: string;
@@ -73,6 +77,7 @@ export interface Printer {
   printMode: string;
   dimension: string;
   weight: number;
+  features: Array<string>;
   speed: string;
   interface: string;
   maximumPrintWidth: string;

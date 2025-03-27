@@ -92,9 +92,21 @@ const Tabs: React.FC<Props> = ({ data, tagIndex }) => {
           id="tabs-specification"
           role="tabpanel"
         >
-          <p>Order quantity: {data[tagIndex].orderQuantity}</p>
-          <p>Dimension: {data[tagIndex].dimension}</p>
-          {data[tagIndex].description && (
+          {"orderQuantity" in data[tagIndex] && (
+            <p>
+              <span className="font-bold">Order quantity:</span>{" "}
+              {data[tagIndex].orderQuantity}
+            </p>
+          )}
+
+          {"dimension" in data[tagIndex] && (
+            <p>
+              <span className="font-bold">Dimension: </span>
+              {data[tagIndex].dimension}
+            </p>
+          )}
+
+          {"description" in data[tagIndex] && (
             <p className="mt-4">{data[tagIndex].description}</p>
           )}
         </div>
@@ -104,7 +116,7 @@ const Tabs: React.FC<Props> = ({ data, tagIndex }) => {
           role="tabpanel"
           aria-labelledby="tabs-profile-tab"
         >
-          {data[tagIndex].application ? (
+          {"application" in data[tagIndex] ? (
             data[tagIndex].application.map((app: string, i: number) => (
               <p key={i}>{app}</p>
             ))

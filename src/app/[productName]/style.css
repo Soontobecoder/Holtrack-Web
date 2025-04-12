@@ -5,6 +5,10 @@
   }
 } */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* width */
 ::-webkit-scrollbar {
   width: 4px;
@@ -28,4 +32,27 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+@keyframes strobe {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+@layer utilities {
+  .animate-strobe {
+    animation: strobe 1.5s infinite ease-in-out;
+  }
+
+  .animate-strobe-delay {
+    animation: strobe 1.5s infinite ease-in-out;
+    animation-delay: 0.3s;
+  }
 }

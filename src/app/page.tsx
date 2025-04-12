@@ -8,7 +8,7 @@ import { CardTitle } from "./components/CardTitle";
 import { Tabs } from "./components/Tabs";
 import { ScrollerList } from "./components/ScrollerList";
 
-const Home = () => {
+const Home: React.FC = () => {
   const [isReducedMotion, setIsReducedMotion] = useState(false);
 
   useEffect(() => {

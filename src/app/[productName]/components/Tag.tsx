@@ -3,6 +3,7 @@ import { ImageSlider } from "./ImageSlider";
 import { useState, useEffect, useRef } from "react";
 import { Data } from "../lib/types";
 import Tabs from "./Tabs";
+import Card from "./Card";
 
 interface Props {
   rfidTag: Data;
@@ -47,12 +48,12 @@ const Tag: React.FC<Props> = ({ rfidTag, setRightParent }) => {
     <div
       // to get the height of the right side element and assign the whole div to the ref
       ref={height}
-      className="xl:grid grid-cols-8 xl:p-0 p-10 transition ease-in-out duration-150 transition-opacity"
+      className="lg:grid grid-cols-8 xl:p-0 p-10 transition ease-in-out duration-150 transition-opacity"
     >
-      <div className="col-span-2 flex xl:justify-start justify-center">
+      <div className="col-span-3 flex justify-center">
         <ImageSlider onSlideChange={handleTagChange} datas={rfidTag.device} />
       </div>
-      <div className="ml-5 col-span-4">
+      <div className="ml-5 mt-4 xl:mt-0 col-span-4">
         {"name" in rfidTag.device[tagIndex] && (
           <h1 className="text-2xl font-bold">
             {rfidTag.device[tagIndex].name}
@@ -82,9 +83,9 @@ const Tag: React.FC<Props> = ({ rfidTag, setRightParent }) => {
         </a>
       </div>
       <div className="col-span-8 row-start-2 mt-8">
-        <div className="relative h-[800px] md:h-[600px] xl:h-[400px] mr-4 rounded-lg bg-[url('https://lucknowrecreation.com/wp-content/uploads/2018/04/Monthly-Website-Header-background-e1522931579825.jpg')] bg-cover bg-no-repeat">
+        <div className="relative h-[700px] md:h-[400px] xl:h-[400px] mr-4 rounded-lg bg-[url('https://lucknowrecreation.com/wp-content/uploads/2018/04/Monthly-Website-Header-background-e1522931579825.jpg')] bg-cover bg-no-repeat">
           <div className="absolute inset-0 bg-black/60"></div>
-          <div className="p-20 absolute flex flex-col justify-end text-white ">
+          <div className="p-5 xl:p-20 absolute flex flex-col justify-end text-white ">
             <h1 className="text-4xl font-bold">
               <span className="text-warning">RFID</span> Tag
             </h1>
@@ -105,36 +106,34 @@ const Tag: React.FC<Props> = ({ rfidTag, setRightParent }) => {
           </div>
         </div>
       </div>
-      <div className="col-span-8 p-20 row-start-3 mt-8">
-        <h1 className="text-4xl text-end font-bold">
+      <div className="col-span-8 p-5 xl:p-20 pt-10 xl:pt-4 row-start-3 xl:mt-8">
+        <h1 className="text-4xl text-center font-bold">
           How <span className="text-warning">RFID</span> Works
         </h1>
-        <div className="text-xl text-justify mt-4">
-          <ol className="list-decimal">
-            <li>
-              Reader/Interrogator The RFID reader (also known as an
+        <div className="flex-col flex md:flex-row justify-center gap-4 mt-4 mx-auto">
+          <Card
+            id={1}
+            title="Interrogator"
+            body="Reader/Interrogator The RFID reader (also known as an
               interrogator) emits radio waves through its antenna, creating an
-              electromagnetic field around it.
-            </li>
-            <li className="mt-3">
-              Tag Activation When an RFID tag passes within range of this field,
-              the tag’s antenna picks up the signal. In passive systems, the tag
+              electromagnetic field around it."
+          />
+          <Card
+            id={2}
+            title="Tag Activation"
+            body="When an RFID tag passes within range of this field,
+              the tag’s antenna picks up the signal. The tag
               uses the energy from the reader’s signal to power its internal
-              chip. In active systems, the tag has its own power source (e.g., a
-              small battery).
-            </li>
-            <li className="mt-3">
-              Data Exchange Once powered, the RFID chip modulates the radio
+              chip."
+          />
+          <Card
+            id={3}
+            title="Data Exchange"
+            body="Once powered, the RFID chip modulates the radio
               waves and sends its stored data (e.g., a unique identifier) back
-              to the reader. The reader then forwards that information to a
-              backend system for processing.
-            </li>
-          </ol>
+              to the reader."
+          />
         </div>
-        <p className="text-white text-xl mt-4">
-          Tags are placed on the inventory/asset and they can hold more data
-          than barcodes. These data are read by RFID readers and antennas
-        </p>
       </div>
     </div>
   );

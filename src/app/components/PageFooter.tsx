@@ -15,6 +15,7 @@ export default function PageFooter() {
     setLoading(true);
     setStatus(null);
 
+    // to fire an email using emailjs
     try {
       if (form.current) {
         await emailjs.sendForm(

@@ -47,7 +47,7 @@ export default function ProductDetails({
 
   const handleHeight = (data: number) => {
     setRightHeight(data);
-    console.log(data, "ini tinggi right element");
+    // console.log(data, "ini tinggi right element");
   };
 
   const renderDetails = () => {
@@ -105,7 +105,7 @@ export default function ProductDetails({
           </h1>
           <div
             style={{ direction: "rtl" }}
-            className="container xl:block px-2 flex my-4 xl:w-max xl:pl-12 xl:overflow-y-scroll overflow-x-scroll xl:overflow-x-hidden mt-4"
+            className="container items-end xl:block px-2 flex my-4 xl:w-max xl:pl-12 xl:overflow-y-scroll overflow-x-scroll xl:overflow-x-hidden mt-4"
           >
             {Datas.map(
               (item, index) =>
@@ -114,7 +114,7 @@ export default function ProductDetails({
                     style={{ direction: "ltr" }}
                     item={item}
                     key={item.id}
-                    className={`shrink-0 w-64 xl:mb-0 mb-8 xl:ml-0 ml-8 xl:mr-0 mr-8 xl:w-full ${
+                    className={`shrink-0 xl:mb-0 mb-8 xl:ml-0 ml-8 xl:mr-0 mr-8 xl:w-full ${
                       index === Datas.length - 1 ? "" : "xl:mt-8 xl:border-b-2"
                     }`}
                   />

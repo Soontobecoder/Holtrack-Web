@@ -83,9 +83,9 @@ const Tag: React.FC<Props> = ({ rfidTag, setRightParent }) => {
         </a>
       </div>
       <div className="col-span-8 row-start-2 mt-8">
-        <div className="relative h-[700px] md:h-[400px] xl:h-[400px] mr-4 rounded-lg bg-[url('https://lucknowrecreation.com/wp-content/uploads/2018/04/Monthly-Website-Header-background-e1522931579825.jpg')] bg-cover bg-no-repeat">
+        <div className="relative min-h-[600px] md:min-h-[400px] mr-2 rounded-lg bg-[url('https://lucknowrecreation.com/wp-content/uploads/2018/04/Monthly-Website-Header-background-e1522931579825.jpg')] bg-cover bg-no-repeat">
           <div className="absolute inset-0 bg-black/60"></div>
-          <div className="p-5 xl:p-20 absolute flex flex-col justify-end text-white ">
+          <div className="relative p-5 xl:p-20 flex flex-col justify-end text-white ">
             <h1 className="text-4xl font-bold">
               <span className="text-warning">RFID</span> Tag
             </h1>

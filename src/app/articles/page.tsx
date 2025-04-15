@@ -4,6 +4,7 @@ import { CardHorizontal } from "../components/CardHorizontal";
 import Datas from "../shared/articles.json";
 import { Header } from "../components/Header";
 import PageFooter from "../components/PageFooter";
+import Link from "next/link";
 
 const Article: React.FC = () => {
   // console.log(Datas, "ini data.jsonnya");
@@ -31,18 +32,19 @@ const Article: React.FC = () => {
         </h1>
         <div className="pt-4 flex flex-col gap-10">
           {Datas.map((el, i) => (
-            <Card
-              article={{
-                id: Datas[i].id,
-                title: Datas[i].title,
-                shortDesc: Datas[i].shortDesc,
-                imageDesc: Datas[i].imageDesc,
-                date: Datas[i].date,
-                author: Datas[i].author,
-                relation: Datas[i].relation,
-              }}
-              key={i}
-            />
+            <Link href={`/articles/${el.id}`} key={i}>
+              <Card
+                article={{
+                  id: Datas[i].id,
+                  title: Datas[i].title,
+                  shortDesc: Datas[i].shortDesc,
+                  imageDesc: Datas[i].imageDesc,
+                  date: Datas[i].date,
+                  author: Datas[i].author,
+                  relation: Datas[i].relation,
+                }}
+              />
+            </Link>
           ))}
         </div>
       </div>

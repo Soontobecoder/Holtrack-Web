@@ -9,9 +9,9 @@ const Card: React.FC<Props> = ({ id, title, body }) => {
     <div className="flex gap-8 items-center xl:w-max rounded-xl bg-white p-6 text-surface shadow-xl shadow-xl/30">
       <div className="relative flex items-center justify-center font-bold text-white text-lg">
         {/* Outer circle */}
-        <div className="absolute w-12 h-12 bg-gray-300 rounded-full animate-strobe z-0"></div>
+        <div className="absolute w-12 h-12 bg-warning-300 rounded-full animate-strobe z-0"></div>
         {/* Inner circle */}
-        <div className="absolute w-8 h-8 bg-gray-400 rounded-full animate-strobe-delay z-10"></div>
+        <div className="absolute w-8 h-8 bg-warning-500 rounded-full animate-strobe-delay z-10"></div>
         {/* ID number on top */}
         <div className="relative z-20">{id}</div>
       </div>

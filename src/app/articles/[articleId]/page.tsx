@@ -49,7 +49,7 @@ const ArticleDetail = ({ params }: Props) => {
               </ol>
             </nav>
 
-            <div className="flex flex-col md:mx-[10%] xl:mx-[30%] gap-10 p-10 items-center">
+            <div className="flex flex-col md:mx-[10%] xl:mx-[20%] gap-10 p-10 text-center items-center">
               <div>
                 <h1>
                   {" "}
@@ -69,7 +69,7 @@ const ArticleDetail = ({ params }: Props) => {
                 </div>
               )}
 
-              <div className={article.image1 ? "" : "border-t-4 pt-5"}>
+              <div className={article.image1 ? "" : "border-t-4 w-full pt-5"}>
                 <p>{article.paragraph1}</p>
               </div>
 

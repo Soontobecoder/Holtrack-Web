@@ -9,31 +9,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* width */
-::-webkit-scrollbar {
-  width: 4px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 10px;
-  min-height: 20px; /* Ensure the thumb is at least 20px tall */
-  max-height: 50px; /* You can limit the height (making it shorter even when content is few) */
-  height: 30px; /* Set a fixed height or smaller value for a shorter thumb */
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
 @keyframes strobe {
   0%,
   100% {

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface Props {
   data: {
     author: string;
@@ -7,8 +9,10 @@ interface Props {
 
 export const Avatar: React.FC<Props> = ({ data }) => {
   return (
-    <div className="text-center flex">
-      <img
+    <div className="text-center flex gap-6">
+      <Image
+        width={100}
+        height={100}
         src="https://tecdn.b-cdn.net/img/new/avatars/5.webp"
         className="mx-auto mb-4 w-32 rounded-lg"
         alt="Avatar"

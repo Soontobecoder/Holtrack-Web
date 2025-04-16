@@ -17,9 +17,9 @@ export const Card: React.FC<Prop> = ({ article }) => {
           {article.relation}
         </p>
       </div>
-      <div id="right-side" className="w-1/4 flex justify-end">
+      <div id="right-side" className="w-1/4 flex justify-end items-end">
         <img
-          className="h-full w-auto"
+          className="h-auto w-64"
           alt={article.title}
           src={article.imageDesc}
         />

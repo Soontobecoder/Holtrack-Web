@@ -1,28 +1,62 @@
 [
   {
     "id": 1,
-    "title": "Article 1",
-    "shortDesc": "Hospitality is fast becoming a defining force in U.S.-India ties, driven by investment, tourism, and deepening cross-border industry integration.",
-    "imageDesc": "https://placeholder.com",
-    "paragraph1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "paragraph2": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "paragraph3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "date": "Mar 11, 2025, 06:59pm EDT",
-    "authorDesc": "David Axe is a journalist and filmmaker based in Columbia, South Carolina. He joined Forbes in 2020, and currently focuses on Ukraine. ",
-    "author": "John Doe",
+    "title": "Introduction to RFID Technology ",
+    "shortDesc": "In today's fast-paced business environment, efficiency and accuracy are paramount. Traditional inventory management methods often fall short, leading to errors, delays, and lost revenue. This is where Radio Frequency Identification (RFID) technology emerges as a game-changer",
+    "imageDesc": "https://solution.murata.com/en-global/service/rfid-solution/asset/basic/img/img-basic01.jpg",
+    "heading1": "RFID Technology: The Foundation of Modern Inventory Management",
+    "paragraph1": "In today's fast-paced business environment, efficiency and accuracy are paramount. Traditional inventory management methods often fall short, leading to errors, delays, and lost revenue. This is where Radio Frequency Identification (RFID) technology emerges as a game-changer.",
+    "heading2": "What is RFID?",
+    "paragraph2": " RFID (Radio Frequency Identification) is a wireless non-contact technology that uses radio frequency waves to transfer data. Unlike barcodes that require line-of-sight scanning, RFID enables automatic identification and tracking of items without physical contact. This revolutionary approach allows businesses to track inventory, assets, and products with unprecedented speed and accuracy.",
+    "heading3": "3 key components of RFID",
+    "paragraph3": [
+      "1. RFID Tags: These small devices contain microchips and antennas that store and transmit data. They can be attached to virtually any item and hold significantly more information than traditional barcodes.",
+      "2. RFID Readers: Both fixed and handheld, these devices emit radio signals to communicate with tags. Fixed readers provide constant monitoring of specific areas, while handheld readers offer mobility for on-the-go inventory checks.",
+      "3. RFID Antennas: These components facilitate communication between tags and readers, with some readers featuring built-in antennas and others requiring external ones for extended reach."
+    ],
+    "heading4": "Types of RFID Frequencies",
+    "paragraph4": [
+      "• HF (High Frequency): With a read range of a few centimeters up to about one meter, HF RFID is ideal for access control management, asset tracking, and authentication applications.",
+      "• UHF (Ultra-High Frequency): Offering read ranges of up to several meters, UHF RFID excels in retail inventory tracking, logistics, and supply chain management."
+    ],
+    "heading5": "The Benefits of RFID Technology",
+    "paragraph5": [
+      "• Enhanced Accuracy: Reduces human error in inventory tracking by up to 80%",
+      "• Increased Efficiency: Speeds up inventory counts by up to 95% compared to manual methods",
+      "• Real-time Visibility: Provides instant updates on inventory levels and asset locations",
+      "• Improved Security: Helps prevent theft and loss through better tracking",
+      "• Streamlined Operations: Automates data collection and reporting processes",
+      "• Cost Reduction: Minimizes labor costs and inventory discrepancies"
+    ],
+    "heading6": "How HolTrack Can Transform Your Business",
+    "paragraph6": [
+      "• Customer-Centric Analysis: We begin by understanding your unique challenges and operational goals.",
+      "• Tailored Solutions: Our team designs RFID systems that integrate seamlessly with your existing infrastructure.",
+      "• Quality Hardware: We provide a full range of high-quality RFID tags, readers, antennas, and printers.",
+      "• Expert Implementation: Our specialists ensure smooth installation and system optimization.",
+      "• Comprehensive Training: We empower your team with the knowledge to maximize your RFID investment.",
+      "• Ongoing Support: Our commitment extends beyond implementation with reliable post-installation assistance."
+    ],
+    "closing": "Whether you're a retail business looking to streamline inventory management, a warehouse seeking to optimize logistics, or a manufacturer aiming to enhance supply chain visibility, HolTrack's RFID solutions can revolutionize your operations. Ready to explore how RFID technology can transform your business? Contact our experts today to schedule a consultation and discover the power of 'Securing Tomorrow with RFID Today.'",
+    "date": "Mar 14, 2025, 12:00pm EDT",
+    "authorDesc": "Charissa Utasa is a senior employee at holtech responsible for managing the operations of finances and also public relations. She has been journeying with Holtrack since 2023, the year Holtrack started developing",
+    "author": "Charissa Utasa",
     "relation": "Senior employee at holtech"
   },
   {
     "id": 2,
-    "title": "Article 2",
-    "shortDesc": "Hospitality is fast becoming a defining force in U.S.-India ties, driven by investment, tourism, and deepening cross-border industry integration.",
-    "imageDesc": "https://placeholder.com",
+    "title": "Introduction to RFID Technology ",
+    "shortDesc": "In today's fast-paced business environment, efficiency and accuracy are paramount. Traditional inventory management methods often fall short, leading to errors, delays, and lost revenue. This is where Radio Frequency Identification (RFID) technology emerges as a game-changer",
+    "imageDesc": "https://solution.murata.com/en-global/service/rfid-solution/asset/basic/img/img-basic01.jpg",
+    "heading1": "RFID Technology: The Foundation of Modern Inventory Management",
     "paragraph1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "heading2": "What is RFID?",
     "paragraph2": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "heading3": "How Does RFID Work?",
     "paragraph3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "date": "Mar 11, 2025, 06:59pm EDT",
     "authorDesc": "David Axe is a journalist and filmmaker based in Columbia, South Carolina. He joined Forbes in 2020, and currently focuses on Ukraine. ",
-    "author": "John Doe",
+    "author": "Charissa Utasa",
     "relation": "Senior employee at holtech"
   }
 ]

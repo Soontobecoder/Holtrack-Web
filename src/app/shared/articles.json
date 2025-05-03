@@ -42,21 +42,5 @@
     "authorDesc": "Charissa Utasa is a senior employee at holtech responsible for managing the operations of finances and also public relations. She has been journeying with Holtrack since 2023, the year Holtrack started developing",
     "author": "Charissa Utasa",
     "relation": "Senior employee at holtech"
-  },
-  {
-    "id": 2,
-    "title": "Introduction to RFID Technology ",
-    "shortDesc": "In today's fast-paced business environment, efficiency and accuracy are paramount. Traditional inventory management methods often fall short, leading to errors, delays, and lost revenue. This is where Radio Frequency Identification (RFID) technology emerges as a game-changer",
-    "imageDesc": "https://solution.murata.com/en-global/service/rfid-solution/asset/basic/img/img-basic01.jpg",
-    "heading1": "RFID Technology: The Foundation of Modern Inventory Management",
-    "paragraph1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "heading2": "What is RFID?",
-    "paragraph2": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "heading3": "How Does RFID Work?",
-    "paragraph3": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "date": "Mar 11, 2025, 06:59pm EDT",
-    "authorDesc": "David Axe is a journalist and filmmaker based in Columbia, South Carolina. He joined Forbes in 2020, and currently focuses on Ukraine. ",
-    "author": "Charissa Utasa",
-    "relation": "Senior employee at holtech"
   }
 ]
